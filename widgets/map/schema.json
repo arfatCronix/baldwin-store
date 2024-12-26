@@ -1,0 +1,114 @@
+[
+  {
+    "type": "tab",
+    "label": "Contact Information",
+    "sections": [
+      {
+        "type": "section",
+        "label": "Heading Settings",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "heading",
+            "default": "INTERESTED IN VISITING OUR SHOWROOM?"
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "label": "Business Information",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Open Days",
+            "id": "openDays",
+            "default": "Monday - Friday"
+          },
+          {
+            "type": "text",
+            "label": "Address",
+            "id": "address",
+            "default": "623 Penn Avenue, West Reading PA 19611"
+          },
+          {
+            "type": "text",
+            "label": "Phone",
+            "id": "phone",
+            "default": "855-356-2469"
+          },
+          {
+            "type": "text",
+            "label": "Email",
+            "id": "email",
+            "default": "sales@baldwinhardwaredirect.com"
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "label": "Map Settings",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Map Location Name",
+            "id": "mapLocationName",
+            "default": "Baldwin Brass Center Showroom"
+          },
+          {
+            "type": "input",
+            "label": "Map Embed URL",
+            "id": "mapUrl",
+            "default": ""
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "label": "Style Settings",
+        "settings": [
+          {
+            "type": "color",
+            "label": "Heading Color",
+            "id": "headingColor",
+            "default": "#000000"
+          },
+          {
+            "type": "select",
+            "label": "Font Family",
+            "id": "fontFamily",
+            "default": "inherit",
+            "typeMeta": {
+              "selectOptions": [
+                {
+                  "label": "Default",
+                  "value": "inherit"
+                },
+                {
+                  "label": "Arial",
+                  "value": "Arial"
+                },
+                {
+                  "label": "Open Sans",
+                  "value": "Open Sans"
+                }
+              ]
+            }
+          },
+          {
+            "type": "boxModel",
+            "label": "Content Padding",
+            "id": "contentPadding",
+            "default": {
+              "top": {"value": "20", "type": "px"},
+              "right": {"value": "20", "type": "px"},
+              "bottom": {"value": "20", "type": "px"},
+              "left": {"value": "20", "type": "px"}
+            }
+          }
+        ]
+      }
+    ]
+  }
+  
+]

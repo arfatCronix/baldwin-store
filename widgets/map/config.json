@@ -1,0 +1,28 @@
+{
+  "heading": "INTERESTED IN VISITING OUR SHOWROOM?",
+  "openDays": "Monday - Friday",
+  "address": "623 Penn Avenue, West Reading PA 19611",
+  "phone": "855-356-2469",
+  "email": "sales@baldwinhardwaredirect.com",
+  "mapLocationName": "Baldwin Brass Center Showroom",
+  "headingColor": "#000000",
+  "fontFamily": "inherit",
+  "contentPadding": {
+    "top": {
+      "value": "20",
+      "type": "px"
+    },
+    "right": {
+      "value": "20",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "20",
+      "type": "px"
+    },
+    "left": {
+      "value": "20",
+      "type": "px"
+    }
+  }
+}
