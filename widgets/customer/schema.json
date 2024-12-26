@@ -1,0 +1,105 @@
+  [
+  {
+    "type": "array",
+    "label": "Reviews",
+    "id": "reviews",
+    "defaultCount": 3,
+    "entryLabel": "Review",
+    "schema": [
+      {
+        "type": "tab",
+        "label": "Review Content",
+        "sections": [
+          {
+            "label": "Review Details",
+            "settings": [
+              {
+                "type": "input",
+                "label": "Reviewer Name",
+                "id": "reviewerName",
+                "default": ""
+              },
+              {
+                "type": "input",
+                "label": "Review Text",
+                "id": "reviewText",
+                "default": ""
+              },
+              {
+                "type": "number",
+                "label": "Rating",
+                "id": "rating",
+                "default": 5,  
+                "min": 0,
+                "max": 5,
+                "force_reload": true,
+                "typeMeta": {
+                  "displayType": "stepper"
+                }
+              },            
+              {
+                "type": "imageManager",
+                "label": "Background Image",
+                "id": "backgroundImage",
+                "default": {
+                  "type": "IMAGE_MANAGER",
+                  "src": ""
+                },
+                "typeMeta": {
+                  "placeholder": "Select or upload an image"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "tab",
+    "label": "Display Settings",
+    "sections": [
+      {
+        "label": "Layout",
+        "settings": [
+          {
+            "type": "select",
+            "label": "Reviews per row",
+            "id": "reviewsPerRow",
+            "default": "3",
+            "typeMeta": {
+              "selectOptions": [
+                {"label": "2", "value": "2"},
+                {"label": "3", "value": "3"},
+                {"label": "4", "value": "4"}
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "label": "Colors",
+        "settings": [
+          {
+            "type": "color",
+            "label": "Star color",
+            "id": "starColor",
+            "default": "#FFD700"
+          },
+          {
+            "type": "color",
+            "label": "Text color",
+            "id": "textColor",
+            "default": "#333333"
+          },
+          {
+            "type": "color",
+            "label": "Background color",
+            "id": "backgroundColor",
+            "default": "#FFFFFF"
+          }
+        ]
+      }
+    ]
+  }
+]

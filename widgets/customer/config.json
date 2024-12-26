@@ -1,0 +1,38 @@
+{
+  "reviews": [
+    {
+      "rating": {
+        "value": 5,
+        "type": "integer"
+      },
+      "backgroundImage": {
+        "type": "IMAGE_MANAGER",
+        "src": ""
+      }
+    },
+    {
+      "rating": {
+        "value": 5,
+        "type": "integer"
+      },
+      "backgroundImage": {
+        "type": "IMAGE_MANAGER",
+        "src": ""
+      }
+    },
+    {
+      "rating": {
+        "value": 5,
+        "type": "integer"
+      },
+      "backgroundImage": {
+        "type": "IMAGE_MANAGER",
+        "src": ""
+      }
+    }
+  ],
+  "reviewsPerRow": "3",
+  "starColor": "#FFD700",
+  "textColor": "#333333",
+  "backgroundColor": "#FFFFFF"
+}
