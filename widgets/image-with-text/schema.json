@@ -1,0 +1,58 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Block Settings",
+        "settings": [
+          {
+            "label": "Image Source",
+            "type": "imageManager",
+            "id": "image",
+            "default": {
+              "src": "https://cdn11.bigcommerce.com/s-szs4mx4t14/images/stencil/original/image-manager/cbbcstorefront.jpg?t=1734029094",
+              "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "label": "Alt text of image",
+            "type": "input",
+            "id": "alt",
+            "default": "Building Image"
+          },
+          {
+            "label": "Heading of Block Text",
+            "type": "input",
+            "id": "heading",
+            "default": "Our Story"
+          },
+          {
+            "label": "Sub-Heading of Block Text",
+            "type": "input",
+            "id": "sub-text",
+            "default": "BALDWIN IS WHAT WE DO "
+          },
+          {
+            "label": "Description of Block",
+            "type": "input",
+            "id": "description",
+            "default": "Family owned and operated since 1991, we are Baldwin's flagship store and remain the largest showroom dedicated to Baldwin Hardware products.  All of our sales and customer service staff are factory trained and certified.  Our 40+years of Baldwin experience allows us to provide excellent customer service with the largest inventory at the best pricing, guaranteed."
+          },
+          {
+            "label": "Button Text",
+            "type": "input",
+            "id": "label",
+            "default": "Learn more"
+          },
+          {
+            "label": "Button Link",
+            "type": "input",
+            "id": "link",
+            "default": "#"
+          }
+        ]
+      }
+    ]
+  }
+]

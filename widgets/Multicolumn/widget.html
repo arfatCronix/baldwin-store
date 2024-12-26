@@ -1,0 +1,135 @@
+
+<style>
+    #multicolumn-with-text-{{_.id}} .mulicolumn-cards{
+        list-style: none;
+        margin: 0;
+    }
+    #multicolumn-with-text-{{_.id}}  .widget-card-image{
+        line-height: 0;
+    }
+    #multicolumn-with-text-{{_.id}}  li{
+        padding:30px;
+        border-top: 1px solid #ddd;
+    }
+    #multicolumn-with-text-{{_.id}}  li img{
+        width: 100%;
+        aspect-ratio: 1 / .667;
+        object-fit: cover;
+    }
+    #multicolumn-with-text-{{_.id}}  li .widget-card-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    #multicolumn-with-text-{{_.id}}  li .widget-card-content *{
+        text-align: center;
+    }
+    #multicolumn-with-text-{{_.id}}  li p{
+        color: #000;
+        font-family: Barlow;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+        margin-bottom: 4px;
+    }
+    #multicolumn-with-text-{{_.id}} li h3{
+        color: #000;
+        font-family: Teko;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 0.9;
+        margin: 0;
+        text-transform:uppercase;
+    }
+    #multicolumn-with-text-{{_.id}} .button--primary{
+        margin-top: 4px;
+        margin-bottom: 0;
+    }
+    #multicolumn-with-text-{{_.id}} .widget-card-content-wrapper{
+        text-decoration: none;
+    }
+    #multicolumn-with-text-{{_.id}} .widget-card-content-wrapper:hover h3{
+        color: #656565;
+    }
+    #multicolumn-with-text-{{_.id}} .widget-card-content-wrapper:hover .button{
+        background-color: #000;
+        color: #fff;
+    }
+    #multicolumn-with-text-{{_.id}} .button{
+        border-color: inherit;
+        padding: 15.5px;
+        max-width: 140px;
+        width: 100%;
+        font-size: 13px;
+    }
+    @media screen and (min-width: 801px) {
+        #multicolumn-with-text-{{_.id}} .button{
+            max-width: 180px;
+        }
+        #multicolumn-with-text-{{_.id}} {
+            border-top: 1px solid #ddd;
+        }
+        #multicolumn-with-text-{{_.id}}  li{
+            width: 50%;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            border-top:0
+        }
+        #multicolumn-with-text-{{_.id}}  li:nth-child(even){
+            border-left: 1px solid #ddd;
+        }
+        #multicolumn-with-text-{{_.id}} li h3{
+            font-size: 40px;
+        }
+        #multicolumn-with-text-{{_.id}} .mulicolumn-cards{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }
+    }
+    @media screen and (min-width: 1400px) {
+        #multicolumn-with-text-{{_.id}} .mulicolumn-cards{
+            margin-left: -60px;
+            margin-right: -60px;
+        }
+        #multicolumn-with-text-{{_.id}}  li{
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        #multicolumn-with-text-{{_.id}} .container{
+            padding:0;
+        }
+    }
+</style>
+<div id='multicolumn-with-text-{{_.id}}'>
+    <div class="container">
+        <ul class="mulicolumn-cards">
+            {{#each products}}
+                <li>
+                    {{#if link}}<a class="widget-card-content-wrapper" href="{{link}}">{{else}}<div class="mulicolumn-card-content-wrapper">{{/if}}
+                        {{#if image.src }}
+                            <div class="widget-card-image">
+                                <img src="{{image.src}}" alt="{{alt}}" width="400" height="300"/>
+                            </div>
+                        {{/if}}
+                        <div class="widget-card-content">
+                            {{#if title }}<h3>{{title}}</h3>{{/if}}
+                            {{#if description }}<p>{{description}}</p>{{/if}}
+                            {{#if label }}<span class="button button--primary">{{label}}</span>{{/if}}
+                        </div>  
+                    {{#if link}}</a>{{else}}</div>{{/if}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+    
+

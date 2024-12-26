@@ -1,0 +1,37 @@
+{
+  "imagecard": [
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-hniqcnkko3/images/stencil/original/image-manager/bethpage-2.png?t=1733848323",
+        "type": "IMAGE_MANAGER"
+      },
+      "alt": "Entrance Sets",
+      "title": "Entrance Sets",
+      "description": "Standard or Mortise Installation",
+      "label": "Shop Now",
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-hniqcnkko3/images/stencil/original/image-manager/bethpage-2.png?t=1733848323",
+        "type": "IMAGE_MANAGER"
+      },
+      "alt": "Entrance Sets",
+      "title": "Entrance Sets",
+      "description": "Standard or Mortise Installation",
+      "label": "Shop Now",
+      "link": "#"
+    },
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-hniqcnkko3/images/stencil/original/image-manager/bethpage-2.png?t=1733848323",
+        "type": "IMAGE_MANAGER"
+      },
+      "alt": "Entrance Sets",
+      "title": "Entrance Sets",
+      "description": "Standard or Mortise Installation",
+      "label": "Shop Now",
+      "link": "#"
+    }
+  ]
+}

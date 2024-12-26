@@ -1,0 +1,93 @@
+
+<style>
+    .footer-accordion{
+        border-top: 0.5px solid #DDD;
+    }
+    .footer-accordion summary{
+        padding: 25px 0;
+        position: relative;
+        cursor: pointer;
+        line-height: 1;
+    }
+    .footer-accordion summary:after{
+        width: 13px;
+        height: 13px;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 27px;
+        background-repeat: no-repeat;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNNi41IDBMNi41IDEzIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxwYXRoIGQ9Ik0wIDYuNUwxMyA2LjUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMS41Ii8+Cjwvc3ZnPg==');
+    }
+    .footer-accordion[open] summary:after{        
+        top: 32px;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgMTMgMyIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0iTTAgMS41TDEzIDEuNSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPC9zdmc+');
+    }
+    .footer-accordion summary h3{
+        margin: 0;
+    }
+    .footer-accordion .panel{
+        padding-bottom: 25px;
+    }
+    .footer-accordion .panel,
+    .footer-accordion h3.desktop{
+        display: none;
+    }
+    .footer-accordion[open] .panel{
+        display: block;
+    }
+    .footer-accordion .panel ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .footer-accordion .panel ul a{
+        text-decoration: none;
+    }
+    @media (min-width: 1024px){
+        .footer-accordion{
+            border: 0;
+        }
+        .footer-accordion summary{
+            display: none;
+        }
+        .footer-accordion h3.desktop{
+            display: block;
+        }
+    }
+</style>
+{{#if heading }}   
+    <details id="footer-accordion-{{_.id}}" class="footer-accordion" open>
+        <summary><h3 class="footer-info-heading">{{heading}}</h3></summary>
+        <h3 class="footer-info-heading desktop">{{heading}}</h3>
+        <div class="panel">
+            {{{content}}}
+        </div>
+    </details>
+{{/if}}
+
+<script>
+    function handleDetailsOnResize() {
+        const detailsElements = document.querySelectorAll('.footer-accordion');
+        const isMobile = window.innerWidth < 1024;
+
+        detailsElements.forEach(details => {
+            if (isMobile) {
+                // Remove the 'open' attribute on mobile screens
+                details.removeAttribute('open');
+            } else {
+                // Ensure 'open' attribute is restored on larger screens
+                if (!details.hasAttribute('open')) {
+                    details.setAttribute('open', '');
+                }
+            }
+        });
+        }
+
+        // Add event listener for window resize
+        window.addEventListener('resize', handleDetailsOnResize);
+
+        // Trigger the function on initial load to ensure correct state
+        handleDetailsOnResize();
+</script>
+

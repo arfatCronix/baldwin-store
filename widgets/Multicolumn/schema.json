@@ -1,0 +1,61 @@
+[
+  {
+    "type": "array",
+    "label": "Our Features",
+    "id": "products",
+    "defaultCount": 2,
+    "entryLabel": "list-item",
+    "schema": [
+      {
+        "type": "tab",
+        "label": "Our Features",
+        "sections": [
+          {
+            "label": "Text",
+            "settings": [
+              {
+                "label": "Image",
+                "type": "imageManager",
+                "id": "image",
+                "default": {
+                  "src": "https://cdn11.bigcommerce.com/s-hniqcnkko3/images/stencil/original/image-manager/bethpage-2.png?t=1733848323",
+                  "type": "IMAGE_MANAGER"
+                }
+              },
+              {
+                "type": "input",
+                "id": "alt",
+                "label": "Alt Tag Of Image",
+                "default": "Entrance Sets"
+              },
+              {
+                "type": "input",
+                "id": "title",
+                "label": "Collection Name",
+                "default": "Entrance Sets"
+              },
+              {
+                "type": "input",
+                "id": "description",
+                "label": "Description",
+                "default": "Standard or Mortise Installation"
+              },
+              {
+                "type": "input",
+                "id": "label",
+                "label": "Button Text",
+                "default": "Shop Now"
+              },
+              {
+                "type": "input",
+                "id": "link",
+                "label": "Shop Now Link",
+                "default": "#"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

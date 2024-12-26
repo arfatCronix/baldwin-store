@@ -1,0 +1,36 @@
+<style>
+    .user-links{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+    .user-links li{
+        display: flex;
+        align-items: center;
+    }
+    .user-links li,    
+    .user-links li *{
+        font-size: 12px;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .user-links li svg{
+        margin-right: 8px;
+    }    
+    .user-links li a{
+        text-decoration: none;
+    }
+</style>
+<ul class='user-links'>
+    {{#each quickLinks}}
+        {{#if linkContent }}
+            <li class='single-link'>                    
+                {{#if linkIcon }}{{{linkIcon}}}{{/if}}{{{linkContent}}}
+            </li>
+        {{/if}}
+    {{/each}}
+</ul>
+

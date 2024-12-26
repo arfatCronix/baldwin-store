@@ -1,0 +1,218 @@
+[
+  {
+    "type": "tab",
+    "label": "Settings",
+    "sections": [
+      {
+        "label": "Content",
+        "settings": [
+          {
+            "type": "input",
+            "label": "Heading",
+            "id": "heading",
+            "default": "hello"
+          },
+          {
+            "type": "input",
+            "label": "Description",
+            "id": "description",
+            "default": "hello"
+          },
+          {
+            "type": "color",
+            "id": "background",
+            "label": "Background Colour",
+            "default": "#1D2023"
+          },
+          {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Colour",
+            "default": "#ffffff"
+          },
+          {
+            "type": "element",
+            "label": "Icon",
+            "id": "icon",
+            "typeMeta": {
+              "controls": {
+                "visibility": {
+                  "default": "hide"
+                },
+                "advanced": {
+                  "settings": [
+                    {
+                      "type": "select",
+                      "label": "Icon Type",
+                      "id": "icon_type",
+                      "default": "svg",
+                      "typeMeta": {
+                        "selectOptions": [
+                          {
+                            "label": "Image",
+                            "value": "image"
+                          },
+                          {
+                            "label": "SVG",
+                            "value": "svg"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "imageManager",
+                      "label": "Image",
+                      "id": "icon_image",
+                      "default": {
+                        "src": "",
+                        "type": "IMAGE_MANAGER"
+                      },
+                      "conditional": {
+                        "key": "icon_type",
+                        "operator": "IN",
+                        "value": ["image"]
+                      }
+                    },
+                    {
+                      "type": "code",
+                      "label": "SVG",
+                      "id": "icon_svg",
+                      "conditional": {
+                        "key": "icon_type",
+                        "operator": "IN",
+                        "value": ["svg"]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "type": "boolean",
+            "label": "Add background image",
+            "id": "add_bg_img",
+            "default": false
+          },
+          {
+            "label": "Background Image",
+            "type": "imageManager",
+            "id": "imageUrl",
+            "default": {
+              "src": "https://cdn11.bigcommerce.com/s-bjqt1yp5q3/images/stencil/1280w/carousel/1/stencil-hero-01.jpg?c=1",
+              "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "label": "Background Image Mobile",
+            "type": "imageManager",
+            "id": "mobileimageUrl",
+            "default": {
+              "src": "https://cdn11.bigcommerce.com/s-bjqt1yp5q3/images/stencil/1280w/carousel/1/stencil-hero-01.jpg?c=1",
+              "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "type": "boolean",
+            "label": "Flex Mode",
+            "id": "flex_mode",
+            "default": false
+          },
+          {
+            "type": "boxModel",
+            "label": "Desktop Section Spacing",
+            "id": "desktop_margin_header",
+            "default": {
+              "top": {
+                "value": "0",
+                "type": "px"
+              },
+              "right": {
+                "value": "0",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "0",
+                "type": "px"
+              },
+              "left": {
+                "value": "0",
+                "type": "px"
+              }
+            }
+          },
+          {
+            "type": "boxModel",
+            "label": "Mobile Section Spacing",
+            "id": "mobile_margin_header",
+            "default": {
+              "top": {
+                "value": "0",
+                "type": "px"
+              },
+              "right": {
+                "value": "0",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "0",
+                "type": "px"
+              },
+              "left": {
+                "value": "0",
+                "type": "px"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "array",
+    "label": "Button",
+    "id": "button",
+    "defaultCount": 1,
+    "entryLabel": "button",
+    "schema": [
+      {
+        "type": "tab",
+        "label": "Button",
+        "sections": [
+          {
+            "settings": [
+              {
+                "type": "element",
+                "label": "Button",
+                "id": "button",
+                "typeMeta": {
+                  "controls": {
+                    "visibility": {
+                      "default": "hide"
+                    },
+                    "advanced": {
+                      "settings": [
+                        {
+                          "type": "input",
+                          "id": "text",
+                          "label": "Button Text",
+                          "default": "sign"
+                        },
+                        {
+                          "type": "input",
+                          "id": "url",
+                          "label": "Button URL",
+                          "default": "https://store-rq0g1tmgep.mybigcommerce.com/manage/products"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

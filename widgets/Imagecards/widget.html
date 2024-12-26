@@ -1,0 +1,272 @@
+<style>
+  #image-card-{{_.id}} {
+    padding-top: {{mobile_padding.top.value}}{{mobile_padding.top.type}};
+    padding-bottom: {{mobile_padding.bottom.value}}{{mobile_padding.bottom.type}};
+    padding-left: {{mobile_padding.left.value}}{{mobile_padding.left.type}};
+    padding-right: {{mobile_padding.right.value}}{{mobile_padding.right.type}};
+    {{#if top-border}}
+    border-top: 1px solid #DDD;
+    {{/if}}
+  }
+  #image-card-{{_.id}} .primary-cards .image-card-title {
+    position: absolute;
+    margin:0;
+    padding: 10px 10px 40px;
+    bottom: 0;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    color:{{pc-text-color}};
+    border-bottom: 2px solid transparent;
+  }
+  #image-card-{{_.id}} .image-card a{
+    display: inline-block;
+    width: 100%;
+  }
+  #image-card-{{_.id}} .primary-cards .image-card:hover .image-card-title {
+    color:{{pc-text-color-hover}};
+    border-color: {{pc-text-color}};
+  }
+  #image-card-{{_.id}} .image-card-title,
+  #image-card-{{_.id}} .image-card-title h3{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    line-height: 1.1;
+    letter-spacing: normal;
+    margin: 0;
+  }
+  #image-card-{{_.id}} .primary-cards .image-card a{
+    position: relative;
+  }
+  #image-card-{{_.id}} .image-card img{
+    width: 100%;
+  }
+  #image-card-{{_.id}} .section-header{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #image-card-{{_.id}} .section-header h2{
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  #image-card-{{_.id}} .section-header p{
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  #image-card-{{_.id}} .image-card a{
+    text-decoration: none;
+  }
+  #image-card-{{_.id}} .secondary-cards img{
+    height: 100%;
+    aspect-ratio: 1 / 0.99;
+  }
+  #image-card-{{_.id}} .primary-cards img{
+    aspect-ratio: 1 / 1.29;
+  }
+  #image-card-{{_.id}} .secondary-cards .image-card-title {
+    margin: 0;
+    background-color:{{bg-color}};
+    min-height: 70px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #image-card-{{_.id}} .secondary-cards .image-card-title h3{
+    color: {{text-color}};
+  }
+  #image-card-{{_.id}} .secondary-cards .image-card:hover .image-card-title {
+    background-color:{{ bg-color-hover }};
+  }
+   #image-card-{{_.id}} .secondary-cards .image-card:hover .image-card-title h3{
+    color: {{ text-color-hover }};
+  }
+  #image-card-{{_.id}} .slick-arrow{
+    padding: 0;
+    background: none;
+    border: none;
+    width: 24px;
+    height: 16px;
+    top: -45px;
+  }
+  #image-card-{{_.id}} .slick-prev{
+    left: 20px;
+  }
+  #image-card-{{_.id}} .slick-next{
+    right: 20px;
+  }
+  #image-card-{{_.id}} .slick-prev::before,
+  #image-card-{{_.id}} .slick-next::before{
+    width: 24px;
+    height: 16px;
+  }
+  #image-card-{{_.id}} .slick-prev::before{
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDI1IDE4IiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMC45OTk5OTkgOUw5IDE3TTAuOTk5OTk5IDlMOSAxTTAuOTk5OTk5IDlMMjUgOSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lam9pbj0iYmV2ZWwiLz4KPC9zdmc+");
+  }
+  #image-card-{{_.id}} .slick-next::before{
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDI1IDE4IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTI0IDlMMTYgMTdNMjQgOUwxNiAxTTI0IDlMLTEuNDQ2MzllLTA2IDkiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWpvaW49ImJldmVsIi8+Cjwvc3ZnPg==");
+  }
+  #image-card-{{_.id}} .image-card-wrapper{
+    list-style:none;
+    margin: 0;
+  }
+  #image-card-{{_.id}} .image-card-wrapper.slick-initialized .image-card{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #image-card-{{_.id}} .slick-list{
+    padding-left: 82px!important;
+    padding-right: 82px!important;
+  }
+  #image-card-{{_.id}} .view-all-link{
+    margin-top: 30px;
+    text-align: center;
+  }
+  #image-card-{{_.id}} .view-all-link a{
+    font-size: 12px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-underline-offset: 4px;
+    font-weight: 500;
+  }
+  @media screen and (min-width: 801px) {
+    #image-card-{{_.id}} .image-card-wrapper{
+      margin: 0 -5.5px;
+    }
+    #image-card-{{_.id}} .view-all-link{
+      margin-top: 40px;
+    }
+    #image-card-{{_.id}} .view-all-link a{
+      font-size: 15px;
+    }
+    #image-card-{{_.id}} .section-header h2{
+      font-size: 40px;
+    }
+    #image-card-{{_.id}} .section-header{
+      margin-bottom: 50px;
+    }
+    #image-card-{{_.id}} .slick-list{
+      padding-left: 0!important;
+      padding-right: 0!important;
+    }
+    #image-card-{{_.id}} .image-card-title,
+    #image-card-{{_.id}} .image-card-title h3{
+      font-size: 18px;
+    }
+    #image-card-{{_.id}} .image-card-wrapper:not(.slick-initialized){
+      display: flex;
+      gap: 11px;
+      flex-wrap: wrap;
+    }
+    #image-card-{{_.id}} .image-card-wrapper:not(.slick-initialized) .image-card{
+      width: calc(33.33% - 11px * 3 / 2);
+    }
+    #image-card-{{_.id}} .image-card-wrapper.slick-initialized .image-card{
+      padding-left: 5.5px;
+      padding-right: 5.5px;
+    }
+    #image-card-{{_.id}} {
+      padding-top: {{desktop_padding.top.value}}{{desktop_padding.top.type}};
+      padding-bottom: {{desktop_padding.bottom.value}}{{desktop_padding.bottom.type}};
+      padding-left: {{desktop_padding.left.value}}{{desktop_padding.left.type}};
+      padding-right: {{desktop_padding.right.value}}{{desktop_padding.right.type}};
+    }
+    #image-card-{{_.id}} .width-sm-container{
+      max-width: 1210px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 30px;
+      padding-left: 30px;
+      width: 100%;
+    }
+    #image-card-{{_.id}} .secondary-cards .image-card-title{
+      min-height: 90px;
+    }
+    #image-card-{{_.id}} .slick-arrow{
+      top: -55px;
+    }
+  }
+  @media screen and (min-width: 1400px){
+    #image-card-{{_.id}} .image-card-wrapper:not(.slick-initialized) .image-card{
+      width: calc(25% - 11px * 3 / 2);
+    }
+    #image-card-{{_.id}} .slick-prev{
+      top:50%;
+      left: -65px;
+    }
+    #image-card-{{_.id}} .slick-next{
+      top:50%;
+      right: -65px;
+    }
+  }
+</style>
+<div class="image-card-section" id="image-card-{{_.id}}">
+  <div class="{{#unless full_section}}width-sm-container{{/unless}}{{#if secondary_cards}} secondary-cards{{else}} primary-cards{{/if}}">
+    {{#or (if title) (if description)}}
+      <div class="section-header">
+        {{#if title }}
+          <h2>{{title}}</h2>
+        {{/if}} 
+        {{#if description}}
+          <p>{{description}}</p>
+        {{/if}}
+      </div>
+    {{/or}}
+    <ul class="image-card-wrapper"
+    data-slick='{
+            "arrows": true,
+            "dots": false,
+            "mobileFirst": true,
+            "slidesToShow": 1,
+            "slidesToScroll": 1,
+            "infinite": true,
+            "centermode":true,
+            "slide": "[data-image-card-slide]",
+            "responsive": [
+            {
+              "breakpoint": 801,
+              "settings": {
+                "slidesToShow": 2,
+                "slidesToScroll": 1
+              }
+            },
+            {
+              "breakpoint": 990,
+              "settings": {
+                "slidesToShow": 3,
+                "slidesToScroll": 1
+              }
+            },
+            {
+              "breakpoint": 1200,
+              "settings": {
+                "slidesToShow": 4,
+                "slidesToScroll": 1
+              }
+            }
+          ]
+        }'>
+      {{#each cards}}
+        <li class="image-card" data-image-card-slide>
+          <a href="{{card_url}}">
+            <img src="{{card_img.src}}" alt="{{card_title}}" width="400" height="300"/>
+            {{#if ../secondary_cards}}
+              <div class="image-card-title"><h3>{{card_title}}</h3></div>
+            {{else}}
+              <h3 class="image-card-title">{{card_title}}</h3>
+            {{/if}}
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+    {{#and (if view_all) (if view_all_link) }}
+    <div class="view-all-link">
+      <a href="{{view_all_link}}" >View all products</a>
+    </div>
+    {{/and}}
+  </div>
+</div>

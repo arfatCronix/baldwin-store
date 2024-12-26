@@ -1,0 +1,42 @@
+<h2 class="page-heading container">{{lang 'products.top' }}</h2>
+<section class="productCarousel productGrid-alternate-cards"
+    data-list-name="{{list}}"
+    data-slick='{
+        "infinite": true,
+        "mobileFirst": true,
+        "slidesToShow": 1,
+        "slidesToScroll": 1,
+        "slide": "[data-top-product-slide]",
+        "dots": false,
+        "adaptiveHeight": false,
+        "responsive": [
+            {
+                "breakpoint": 800,
+                "settings": {
+                    "slidesToShow": 2,
+                    "slidesToScroll": 1
+                }
+            },
+            {
+                "breakpoint": 990,
+                "settings": {
+                    "slidesToShow": 4,
+                    "slidesToScroll": 1
+                }
+            },
+            {
+                "breakpoint": 1200,
+                "settings": {
+                    "slidesToShow": 4,
+                    "slidesToScroll": 1
+                }
+            }
+        ]
+    }'
+>
+    {{#each products}}
+    <div data-top-product-slide class="productCarousel-slide product">
+        {{>components/products/card settings=../settings theme_settings=../theme_settings customer=../customer event="list" position=(add @index 1)}}
+    </div>
+    {{/each}}
+</section>

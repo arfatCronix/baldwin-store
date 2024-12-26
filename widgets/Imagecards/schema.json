@@ -1,0 +1,178 @@
+[
+  {
+    "type": "tab",
+    "label": "Settings",
+    "sections": [
+      {
+        "label": "Content",
+        "settings": [
+          {
+            "type": "boolean",
+            "label": "Make Section Full Width",
+            "id": "full_section",
+            "default": false
+          },
+          {
+            "type": "boolean",
+            "label": "Add top border",
+            "id": "top-border",
+            "default": false
+          },
+          {
+            "type": "boolean",
+            "label": "Show View ALL",
+            "id": "view_all",
+            "default": false
+          },
+          {
+            "type": "input",
+            "label": "View ALL Link",
+            "id": "view_all_link",
+            "default": "/"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Section Title",
+            "default": "Influencer Picks"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Section Description",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a elit faucibus, vehicula urna sit amet, tincidunt orci."
+          },
+          {
+            "type": "color",
+            "label": "Primary card text color",
+            "id": "pc-text-color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "label": "Primary card text color on hover",
+            "id": "pc-text-color-hover",
+            "default": "#CFCFCF"
+          },
+          {
+            "type": "boolean",
+            "label": "Secondary Cards",
+            "id": "secondary_cards",
+            "default": false
+          },
+          {
+            "type": "color",
+            "label": "Background Color",
+            "id": "bg-color",
+            "default": "#F5F5F5"
+          },
+          {
+            "type": "color",
+            "label": "Text Color",
+            "id": "text-color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "label": "Background Color hover",
+            "id": "bg-color-hover",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "label": "Text Color hover",
+            "id": "text-color-hover",
+            "default": "#ffffff"
+          },
+
+          {
+            "type": "boxModel",
+            "label": "Desktop Space",
+            "id": "desktop_padding",
+            "default": {
+              "top": {
+                "value": "0",
+                "type": "px"
+              },
+              "right": {
+                "value": "0",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "0",
+                "type": "px"
+              },
+              "left": {
+                "value": "0",
+                "type": "px"
+              }
+            }
+          },
+          {
+            "type": "boxModel",
+            "label": "Mobile Space",
+            "id": "mobile_padding",
+            "default": {
+              "top": {
+                "value": "0",
+                "type": "px"
+              },
+              "right": {
+                "value": "0",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "0",
+                "type": "px"
+              },
+              "left": {
+                "value": "0",
+                "type": "px"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "array",
+    "label": "Images",
+    "id": "cards",
+    "defaultCount": 3,
+    "entryLabel": "Cards",
+    "schema": [
+      {
+        "type": "tab",
+        "label": "Image",
+        "sections": [
+          {
+            "settings": [
+              {
+                "type": "imageManager",
+                "label": "Image",
+                "id": "card_img",
+                "default": {
+                  "type": "IMAGE_MANAGER",
+                  "src": "https://cdn11.bigcommerce.com/s-szs4mx4t14/images/stencil/original/image-manager/lock-parts.jpg?t=1733852713"
+                }
+              },
+              {
+                "type": "input",
+                "label": "Title",
+                "id": "card_title",
+                "default": "Influencer"
+              },
+              {
+                "type": "input",
+                "label": "Link",
+                "id": "card_url",
+                "default": "/"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

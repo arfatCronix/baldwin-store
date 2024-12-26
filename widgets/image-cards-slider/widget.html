@@ -1,0 +1,266 @@
+
+<style>
+    #multicolumn-with-text-slider-{{_.id}} {
+        padding-top: {{mobile_padding.top.value}}{{mobile_padding.top.type}};
+        padding-bottom: {{mobile_padding.bottom.value}}{{mobile_padding.bottom.type}};
+        padding-left: {{mobile_padding.left.value}}{{mobile_padding.left.type}};
+        padding-right: {{mobile_padding.right.value}}{{mobile_padding.right.type}};
+    }
+    #multicolumn-with-text-slider-{{_.id}} .mulicolumn-cards{
+        list-style: none;
+        margin: 0;
+    }
+    #multicolumn-with-text-slider-{{_.id}}  .widget-card-image{
+        line-height: 0;
+    }
+    #multicolumn-with-text-slider-{{_.id}}  li{
+        padding:50px 30px;
+        border-left: 1px solid #ddd;
+    }
+    #multicolumn-with-text-slider-{{_.id}}  li img{
+        width: 100%;
+        aspect-ratio: 1 / 0.98;
+        object-fit: cover;
+    }
+    #multicolumn-with-text-slider-{{_.id}}  li p{
+        color: #000;
+        font-family: Barlow;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+        margin-bottom: 4px;
+    }
+    #multicolumn-with-text-slider-{{_.id}} li h3{
+        color: #000;
+        font-family: Teko;
+        font-size: 20px;
+        font-weight: 500;
+        line-height:1.1;
+        margin:0 0 30px;
+        text-transform:uppercase;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .button--primary{
+        margin-top: 4px;
+        margin-bottom: 0;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .widget-card-content-wrapper{
+        text-decoration: none;
+        text-align: center;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .widget-card-content-wrapper:hover h3{
+        color: #656565;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .button{
+        border-color: inherit;
+        padding: 15.5px;
+        max-width: 140px;
+        width: 100%;
+        font-size: 13px;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .section-header{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .section-header h2{
+        font-size: 32px;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .section-header p{
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .mulicolumn-cards-slider-wrapper{
+        border-top: 1px solid #ddd;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .slick-prev{
+        left: 30px;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .slick-next{
+        right: 30px;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .slick-prev::before,
+    #multicolumn-with-text-slider-{{_.id}} .slick-next::before{
+        width: 24px;
+        height: 16px;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .slick-prev::before{
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDI1IDE4IiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMC45OTk5OTkgOUw5IDE3TTAuOTk5OTk5IDlMOSAxTTAuOTk5OTk5IDlMMjUgOSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lam9pbj0iYmV2ZWwiLz4KPC9zdmc+");
+    }
+    #multicolumn-with-text-slider-{{_.id}} .slick-next::before{
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDI1IDE4IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTI0IDlMMTYgMTdNMjQgOUwxNiAxTTI0IDlMLTEuNDQ2MzllLTA2IDkiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWpvaW49ImJldmVsIi8+Cjwvc3ZnPg==");
+    } 
+    #multicolumn-with-text-slider-{{_.id}} .underlined-link{
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: normal;
+        color: #000;
+        position: relative;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .slick-arrow{
+        padding: 0;
+        background: none;
+        border: none;
+        width: 24px;
+        height: 16px;
+        top: -44px;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .underlined-link:before{
+        position: absolute;
+        content: "";
+        bottom: -1px;
+        border-bottom: 1px solid #000;
+        width: 100%;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .widget-card-content-wrapper:hover .underlined-link:before{
+        width: 50%;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+    #multicolumn-with-text-slider-{{_.id}}  .simple-link{
+        margin-top: 19px;
+    }
+    #multicolumn-with-text-slider-{{_.id}} .slick-list{
+        padding-left: 47px!important;
+        padding-right: 47px!important;
+    }
+    @media screen and (min-width: 801px) {
+        #multicolumn-with-text-slider-{{_.id}} .slick-list{
+            padding-left: 0!important;
+            padding-right: 0!important;
+        }
+        #multicolumn-with-text-slider-{{_.id}} .slick-prev{
+            left: 60px;
+        }
+        #multicolumn-with-text-slider-{{_.id}} .slick-next{
+            right: 60px;
+        }
+        #multicolumn-with-text-slider-{{_.id}} .slick-arrow{
+            top: -55px;
+        }
+        #multicolumn-with-text-slider-{{_.id}}  .simple-link{
+            margin-top: 24px;
+        }
+        #multicolumn-with-text-slider-{{_.id}} .underlined-link{
+            font-size: 15px;
+        }
+        #multicolumn-with-text-slider-{{_.id}} {
+            padding-top: {{desktop_padding.top.value}}{{desktop_padding.top.type}};
+            padding-bottom: {{desktop_padding.bottom.value}}{{desktop_padding.bottom.type}};
+            padding-left: {{desktop_padding.left.value}}{{desktop_padding.left.type}};
+            padding-right: {{desktop_padding.right.value}}{{desktop_padding.right.type}};
+        }
+        #multicolumn-with-text-slider-{{_.id}} .section-header h2{
+            font-size: 40px;
+        }
+        #multicolumn-with-text-slider-{{_.id}} .section-header{
+            margin-bottom: 50px;
+        }
+        #multicolumn-with-text-slider-{{_.id}} .button{
+            max-width: 180px;
+        }
+        #multicolumn-with-text-slider-{{_.id}}  li{
+            width: 33.33%;
+            padding-top: 57px;
+            padding-bottom: 60px;
+            border-top:0
+        }
+        #multicolumn-with-text-slider-{{_.id}} li h3{
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        #multicolumn-with-text-slider-{{_.id}} .mulicolumn-cards{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }
+        #multicolumn-with-text-slider-{{_.id}} li.slick-current{
+            border-left: 0;
+        }
+    }
+    @media screen and (min-width: 1400px) {
+        #multicolumn-with-text-slider-{{_.id}} .mulicolumn-cards{
+            margin-left: -60px;
+            margin-right: -60px;
+        }
+        #multicolumn-with-text-slider-{{_.id}}  li{
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        #multicolumn-with-text-slider-{{_.id}} .container{
+            padding:0;
+        }
+    }
+</style>
+<div id='multicolumn-with-text-slider-{{_.id}}'>
+    <div class="container">
+        {{#or (if title) (if description)}}
+            <div class="section-header">
+                {{#if title }}
+                    <h2>{{title}}</h2>
+                {{/if}} 
+                {{#if description}}
+                    <p>{{description}}</p>
+                {{/if}}
+            </div>
+        {{/or}}
+    </div>
+    <div class="mulicolumn-cards-slider-wrapper">
+        <div class="container">
+            <ul class="mulicolumn-cards"
+            data-slick='{
+                "arrows": true,
+                "dots": false,
+                "mobileFirst": true,
+                "slidesToShow": 1,
+                "slidesToScroll": 1,
+                "infinite": true,
+                "centermode":true,
+                "slide": "[data-card-slide]",
+                "responsive": [
+                {
+                "breakpoint": 801,
+                "settings": {
+                    "slidesToShow": 2,
+                    "slidesToScroll": 1
+                }
+                },
+                {
+                "breakpoint": 990,
+                "settings": {
+                    "slidesToShow": 3,
+                    "slidesToScroll": 1
+                }
+                }
+            ]
+            }'>
+                {{#each imagecard}}
+                    <li data-card-slide>
+                        {{#if link}}<a class="widget-card-content-wrapper" href="{{link}}">{{else}}<div class="mulicolumn-card-content-wrapper">{{/if}}
+                            {{#if title }}<h3>{{title}}</h3>{{/if}}
+                            {{#if image.src }}
+                                <div class="widget-card-image">
+                                    <img src="{{image.src}}" alt="{{title}}" width="400" height="300"/>
+                                </div>
+                            {{/if}}
+                            {{#if label }}
+                            <div class="simple-link">
+                                <span class="underlined-link">{{label}}</span>
+                            </div>
+                            {{/if}}
+                        {{#if link}}</a>{{else}}</div>{{/if}}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+

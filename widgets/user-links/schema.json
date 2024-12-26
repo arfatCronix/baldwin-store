@@ -1,0 +1,33 @@
+[
+  {
+    "type": "array",
+    "label": "Quick Links",
+    "id": "quickLinks",
+    "entryLabel": "Slide",
+    "schema": [
+      {
+        "type": "tab",
+        "label": "Content",
+        "sections": [
+          {
+            "label": "Add Quick Links",
+            "settings": [
+              {
+                "type": "text",
+                "id": "linkIcon",
+                "label": "Add Icon",
+                "default": "<svg xmlns='http://www.w3.org/2000/svg' width='9' height='13' viewBox='0 0 9 13' fill='none'> <rect width='9' height='13' rx='2' fill='#525252'/> <path d='M3.5 2L5.5 2' stroke='black' stroke-width='1.2' stroke-linecap='round'/> </svg>"
+              },
+              {
+                "type": "text",
+                "id": "linkContent",
+                "label": "Add Announcement Content",
+                "default": "Need Help?"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

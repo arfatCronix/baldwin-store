@@ -1,0 +1,69 @@
+{
+  "title": "Influencer Picks",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a elit faucibus, vehicula urna sit amet, tincidunt orci.",
+  "card-color": "#ffffff",
+  "card-color-hover": "#CFCFCF",
+  "overlay_color": "#000000",
+  "desktop_margin": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": "px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  },
+  "mobile_margin": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": "px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  },
+  "image_cards": [
+    {
+      "card_img": {
+        "type": "IMAGE_MANAGER",
+        "src": "https://cdn11.bigcommerce.com/s-szs4mx4t14/images/stencil/original/image-manager/lock-parts.jpg?t=1733852713"
+      },
+      "card_title": "Influencer",
+      "card_link": "/"
+    },
+    {
+      "card_img": {
+        "type": "IMAGE_MANAGER",
+        "src": "https://cdn11.bigcommerce.com/s-szs4mx4t14/images/stencil/original/image-manager/lock-parts.jpg?t=1733852713"
+      },
+      "card_title": "Influencer",
+      "card_link": "/"
+    },
+    {
+      "card_img": {
+        "type": "IMAGE_MANAGER",
+        "src": "https://cdn11.bigcommerce.com/s-szs4mx4t14/images/stencil/original/image-manager/lock-parts.jpg?t=1733852713"
+      },
+      "card_title": "Influencer",
+      "card_link": "/"
+    }
+  ]
+}

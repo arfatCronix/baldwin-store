@@ -1,0 +1,25 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Footer Accordion",
+        "settings": [
+          {
+            "type": "input",
+            "id": "heading",
+            "label": "Accordion Title",
+            "default": "Accordion Title"
+          },
+          {
+            "type": "code",
+            "id": "content",
+            "label": "Accordion Content",
+            "default": "Accordion Content"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "type": "tab",
+    "label": "Settings",
+    "sections": [
+      {
+        "label": "Content",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Section Title",
+            "default": "Influencer Picks"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Section Description",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a elit faucibus, vehicula urna sit amet, tincidunt orci."
+          },
+          {
+            "type": "boxModel",
+            "label": "Desktop Space",
+            "id": "desktop_padding",
+            "default": {
+              "top": {
+                "value": "0",
+                "type": "px"
+              },
+              "right": {
+                "value": "0",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "0",
+                "type": "px"
+              },
+              "left": {
+                "value": "0",
+                "type": "px"
+              }
+            }
+          },
+          {
+            "type": "boxModel",
+            "label": "Mobile Space",
+            "id": "mobile_padding",
+            "default": {
+              "top": {
+                "value": "0",
+                "type": "px"
+              },
+              "right": {
+                "value": "0",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "0",
+                "type": "px"
+              },
+              "left": {
+                "value": "0",
+                "type": "px"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "array",
+    "label": "Our Collections",
+    "id": "imagecard",
+    "defaultCount": 3,
+    "entryLabel": "list-item",
+    "schema": [
+      {
+        "type": "tab",
+        "label": "Our Features",
+        "sections": [
+          {
+            "label": "Text",
+            "settings": [
+              {
+                "label": "Image",
+                "type": "imageManager",
+                "id": "image",
+                "default": {
+                  "src": "https://cdn11.bigcommerce.com/s-hniqcnkko3/images/stencil/original/image-manager/bethpage-2.png?t=1733848323",
+                  "type": "IMAGE_MANAGER"
+                }
+              },
+              {
+                "type": "input",
+                "id": "title",
+                "label": "Collection Name",
+                "default": "Entrance Sets"
+              },
+              {
+                "type": "input",
+                "id": "label",
+                "label": "Button Text",
+                "default": "Shop Now"
+              },
+              {
+                "type": "input",
+                "id": "link",
+                "label": "Shop Now Link",
+                "default": "#"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

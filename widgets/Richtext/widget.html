@@ -1,0 +1,223 @@
+<style>
+    .benefits-block-{{_.id}} .benefits-block-title {
+        margin-top: 0;
+        font-size:24px;
+        font-weight:400;
+        line-height: 1;
+    }
+    .benefits-block-{{_.id}} .benefits-block-description{
+        font-size: 14px;
+        font-family: Barlow;
+        font-weight: 400;
+        margin: 0;
+        line-height: 1.4;
+    }
+    .benefits-block-{{_.id}} .row_mode .buttons-group{
+        justify-content: flex-end;
+    }
+    .benefits-block-{{_.id}} {
+        padding-top: {{mobile_margin_header.top.value}}{{mobile_margin_header.top.type}};
+        padding-bottom: {{mobile_margin_header.bottom.value}}{{mobile_margin_header.bottom.type}};
+        padding-left: {{mobile_margin_header.left.value}}{{mobile_margin_header.left.type}};
+        padding-right: {{mobile_margin_header.right.value}}{{mobile_margin_header.right.type}};
+    }
+    .benefits-block-{{_.id}} {
+        display:flex;
+        flex-direction: column;
+        gap: 28px;
+        background: {{background}};
+        align-items: center;
+        justify-content: space-around;
+    }
+    .benefits-block-{{_.id}} .benefits-block-inner{
+        max-width: 374px;
+    }
+    .benefits-block-{{_.id}} h2{
+        text-transform: uppercase;
+    }
+    .benefits-block-{{_.id}} h2, .benefits-block-{{_.id}} p, .benefits-block-{{_.id}} .btns{
+        color: {{text_color}};
+    }
+    .benefits-block-{{_.id}} .column_mode .benefits-item{
+        justify-content: center;
+        align-items: center;
+    }
+    .benefits-block-{{_.id}} .column_mode .benefits-list{
+        justify-content: center;
+    }
+    .benefits-block-{{_.id}} .buttons-group .btns {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: 0 0;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        letter-spacing: normal;
+        text-decoration: none;
+        font-size: 13px;
+        text-transform: uppercase;
+        border: 1px solid #fff;
+        line-height: normal;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    .benefits-block-{{_.id}} .width-sm-container{
+      max-width: 1210px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 30px;
+      padding-left: 30px;
+      width: 100%;
+    }
+    .benefits-block-{{_.id}} .buttons-group .btns + .btns{
+        border-top: 0;
+    }
+    .benefits-block-{{_.id}} .column_mode{
+        display: flex;
+        flex-direction:column;
+    }
+    .benefits-block-{{_.id}}.show-bg-image {
+        background-image:url({{mobileimageUrl.src}});
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+    }
+    .benefits-block-{{_.id}} .column_mode .benefits-block-inner{
+        max-width: 572px;
+        text-align: center;
+    }
+    .benefits-block-{{_.id}} .buttons-group .btns:hover {
+        background: #fff;
+        color: #000;
+    }
+    .benefits-block-{{_.id}} .button-wrapper{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .benefits-block-{{_.id}} .benefits-list{
+        display:flex;
+        flex-direction:row;
+        gap:20px;
+        align-items: center;
+        margin-bottom: 28px;
+    }
+    @media (min-width: 400px) {
+        .benefits-block-{{_.id}} .button-wrapper{
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+        .benefits-block-{{_.id}} .buttons-group .btns + .btns{
+            border-top: 1px solid;
+            border-left: 0;
+        }
+    }
+    @media (min-width: 801px) {
+        .benefits-block-{{_.id}} .row_mode {
+            display:flex;
+            align-items: center;
+        }
+        .benefits-block-{{_.id}} .row_mode .benefits-list,
+        .benefits-block-{{_.id}} .row_mode .buttons-group{
+            width: 50%;
+        }
+        .benefits-block-{{_.id}} .row_mode .button-count-2 .button-wrapper{
+            max-width: 360px;
+            width: 100%;
+        }
+        .benefits-block-{{_.id}}{
+            padding-top: {{desktop_margin_header.top.value}}{{desktop_margin_header.top.type}};
+            padding-bottom: {{desktop_margin_header.bottom.value}}{{desktop_margin_header.bottom.type}};
+            padding-left: {{desktop_margin_header.left.value}}{{desktop_margin_header.left.type}};
+            padding-right: {{desktop_margin_header.right.value}}{{desktop_margin_header.right.type}};
+        }
+        .benefits-block-{{_.id}} .benefits-block-description{
+            font-size: 15px;
+        }
+        .benefits-block-{{_.id}} .benefits-block-title{
+            font-size:28px;
+        }
+        .benefits-block-{{_.id}}.show-bg-image{
+            background-image:url({{imageUrl.src}});
+        }
+        .benefits-block-{{_.id}} .column_mode{
+            gap:30px;
+        }
+        .benefits-block-{{_.id}} .benefits-list{
+            display:flex;
+            flex-direction:row;
+            gap:40px;
+            margin-bottom: 0;
+        }
+        .benefits-block-{{_.id}} { 
+            display:flex;
+            flex-direction:row;
+        }
+        .benefits-block-{{_.id}}.benefits-block-inner, .benefits-block-{{_.id}}  .buttons-group{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .benefits-block-{{_.id}} .column_mode .buttons-group a {
+            width: 160px;
+        }
+        .benefits-block-{{_.id}} .column_mode .benefits-list{
+            gap:0;
+        }
+        .benefits-block-{{_.id}} .buttons-group a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 180px;
+        }
+    }
+</style>
+
+<div class="benefits-block-{{_.id}}{{#if add_bg_img}} show-bg-image{{/if}}">
+    <div class="width-sm-container {{#if flex_mode}}column_mode{{else}}row_mode{{/if}}">
+        <div class="benefits-list">
+            {{#if icon.icon_type}}
+                <div class="benefits-item">
+                    {{#if icon.visibility '===' 'show'}}
+                    <span class="benefits-icon">
+                        {{#if icon.icon_type '===' 'image'}}
+                        <img
+                            src="{{icon.icon_image.src}}"
+                            alt="{{text}}"
+                        />
+                        {{else}} {{{icon.icon_svg}}} {{/if}}
+                    </span>
+                    {{/if}} 
+                    {{#if text}}
+                    <p class="benefits-text">{{text}}</p>
+                    {{/if}}
+                </div>
+            {{/if}}
+            <div class="benefits-block-inner">
+                {{#if heading}}
+                    <h2 class="benefits-block-title">{{heading}}</h2>
+                {{/if}}
+                {{#if description}}
+                    <p class="benefits-block-description">{{description}}</p>
+                {{/if}}
+            </div>
+        </div>
+        <div class="buttons-group button-count-{{button.length}}">
+            <div class="button-wrapper">
+            {{#each button }}
+                {{#all (if button.visibility '===' 'show') button.text button.url}}
+                        <a
+                            href="{{button.url}}"
+                            class="btns btn-medium btn-arrow-right1"
+                        >
+                            {{button.text}}
+                        </a>
+                    {{/all}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

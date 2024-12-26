@@ -1,0 +1,135 @@
+[
+  {
+    "type": "tab",
+    "label": "Settings",
+    "sections": [
+      {
+        "label": "Content",
+        "settings": [
+          {
+            "type": "boolean",
+            "label": "Make Section Full Width",
+            "id": "full_section",
+            "default": false
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Section Title",
+            "default": "Influencer Picks"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Section Description",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a elit faucibus, vehicula urna sit amet, tincidunt orci."
+          },
+          {
+            "type": "color",
+            "label": "Card title color",
+            "id": "card-color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "label": "Card title color hover",
+            "id": "card-color-hover",
+            "default": "#CFCFCF"
+          },
+          {
+            "type": "color",
+            "label": "Card Overlay color",
+            "id": "overlay_color",
+            "default": "#000000"
+          },
+          {
+            "type": "boxModel",
+            "label": "Desktop Margin",
+            "id": "desktop_margin",
+            "default": {
+              "top": {
+                "value": "0",
+                "type": "px"
+              },
+              "right": {
+                "value": "0",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "0",
+                "type": "px"
+              },
+              "left": {
+                "value": "0",
+                "type": "px"
+              }
+            }
+          },
+          {
+            "type": "boxModel",
+            "label": "Mobile Margin",
+            "id": "mobile_margin",
+            "default": {
+              "top": {
+                "value": "0",
+                "type": "px"
+              },
+              "right": {
+                "value": "0",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "0",
+                "type": "px"
+              },
+              "left": {
+                "value": "0",
+                "type": "px"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "array",
+    "label": "Images",
+    "id": "image_cards",
+    "defaultCount": 3,
+    "entryLabel": "Card",
+    "schema": [
+      {
+        "type": "tab",
+        "label": "Image",
+        "sections": [
+          {
+            "settings": [
+              {
+                "type": "imageManager",
+                "label": "Image",
+                "id": "card_img",
+                "default": {
+                  "type": "IMAGE_MANAGER",
+                  "src": "https://cdn11.bigcommerce.com/s-szs4mx4t14/images/stencil/original/image-manager/lock-parts.jpg?t=1733852713"
+                }
+              },
+              {
+                "type": "input",
+                "label": "Card Title",
+                "id": "card_title",
+                "default": "Influencer"
+              },
+              {
+                "type": "input",
+                "label": "Link",
+                "id": "card_link",
+                "default": "/"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

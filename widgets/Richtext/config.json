@@ -1,0 +1,64 @@
+{
+  "heading": "Add Heading",
+  "description": "Add Description",
+  "background": "#000000",
+  "text_color": "#ffffff",
+  "button1": {
+    "visibility": "hide",
+    "text": "sign",
+    "url": "/"
+  },
+  "button2": {
+    "visibility": "hide",
+    "text": "sign",
+    "url": "/"
+  },
+  "desktop_margin_header": {
+    "top": {
+      "value": "30",
+      "type": "px"
+    },
+    "right": {
+      "value": "30",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "30",
+      "type": "px"
+    },
+    "left": {
+      "value": "30",
+      "type": "px"
+    }
+  },
+  "mobile_margin_header": {
+    "top": {
+      "value": "30",
+      "type": "px"
+    },
+    "right": {
+      "value": "30",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "30",
+      "type": "px"
+    },
+    "left": {
+      "value": "30",
+      "type": "px"
+    }
+  },
+  "benefits": [
+    {
+      "icon": {
+        "visibility": "hide",
+        "icon_type": "svg",
+        "icon_image": {
+          "src": "",
+          "type": "IMAGE_MANAGER"
+        }
+      }
+    }
+  ]
+}
