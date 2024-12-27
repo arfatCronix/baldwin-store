@@ -23,12 +23,24 @@
         {{/if}} {{#if phone}}
         <div class="phone">
           <strong>Phone:</strong>
-          <span class="light-text">{{phone}}</span>
+          <span class="light-text">
+            <a
+              href="tel:{{phone}}"
+              style="color: inherit; text-decoration: none"
+              >{{phone}}</a
+            >
+          </span>
         </div>
         {{/if}} {{#if email}}
         <div class="email">
           <strong>Email:</strong>
-          <span class="light-text">{{email}}</span>
+          <span class="light-text">
+            <a
+              href="mailto:{{email}}"
+              style="color: inherit; text-decoration: none"
+              >{{email}}</a
+            >
+          </span>
         </div>
         {{/if}}
       </div>
@@ -36,17 +48,7 @@
 
     {{#if mapUrl}}
     <div class="right-column">
-      <div class="map-container">
-        <iframe
-          src="{{mapUrl}}"
-          width="100%"
-          height="100%"
-          frameborder="0"
-          style="border: 0"
-          allowfullscreen
-        >
-        </iframe>
-      </div>
+      <div class="map-container">{{{mapUrl}}}</div>
     </div>
     {{/if}}
   </div>
@@ -104,6 +106,7 @@
     .address {
       padding: 0;
     }
+
     @media (max-width: 768px) {
       .contact-info-widget {
         padding: 20px;

@@ -1,21 +1,38 @@
-<div class="reviews-widget" style="background-color: #ffffff; color: #000000">
+<div
+  class="reviews-widget"
+  style="background-color: {{backgroundColor}}; color: {{textColor}};"
+>
   <div class="reviews-grid reviews-{{reviewsPerRow}}">
     {{#each reviews}}
     <div class="review-card">
       <div class="review-inner">
         <div class="reviewer-avatar">
-          {{#if backgroundImage.src}}
+          {{#if reviewerImage.src}} {{#if (isSvg reviewerImage.src)}}
+          <div
+            class="svg-container"
+            style="background-image: url('{{getImage reviewerImage.src}}');"
+          ></div>
+          {{else}}
           <img
-            src="{{getImage backgroundImage.src}}"
+            src="{{getImage reviewerImage.src}}"
             alt="{{reviewerName}}"
             class="reviewer-image"
           />
-          {{/if}}
+          {{/if}} {{/if}}
         </div>
 
         <div class="review-content">
           <h3 class="review-title">{{reviewerName}}</h3>
           <p class="review-text">{{reviewText}}</p>
+          {{#if linkText}}
+          <a
+            href="{{linkUrl}}"
+            class="review-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{linkText}}</a
+          >
+          {{/if}}
         </div>
       </div>
     </div>
@@ -30,13 +47,13 @@
       padding-top: 0;
     }
 
-    .reviews-grid {
+    .reviews-widget .reviews-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
 
-    .review-card {
+    .reviews-widget .reviews-grid .review-card {
       flex: 0 1 calc(33.333% - 1px);
       box-sizing: border-box;
       padding: 60px 70px;
@@ -48,35 +65,41 @@
       border-right: 1px solid #d7d7d7;
     }
 
-    .review-inner {
+    .reviews-widget .reviews-grid .review-card .review-inner {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
 
-    .reviewer-avatar {
+    .reviews-widget .reviews-grid .review-card .reviewer-avatar {
       width: 48px;
       height: 48px;
       margin-bottom: 15px;
       background: #fff;
-      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
     }
 
-    .reviewer-avatar img {
+    .reviews-widget .reviews-grid .review-card .reviewer-avatar img,
+    .reviews-widget .reviews-grid .review-card .reviewer-avatar .svg-container {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .review-content {
+    .reviews-widget .reviews-grid .review-card .reviewer-avatar .svg-container {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .reviews-widget .reviews-grid .review-card .review-content {
       text-align: left;
     }
 
-    .review-title {
+    .reviews-widget .reviews-grid .review-card .review-content .review-title {
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 10px;
@@ -84,22 +107,38 @@
       margin-top: 0;
     }
 
-    .review-text {
+    .reviews-widget .reviews-grid .review-card .review-content .review-text {
       font-size: 16px;
       line-height: 1.5;
       color: #333;
       margin: 0;
     }
 
+    .reviews-widget .reviews-grid .review-card .review-content .review-link {
+      display: inline-block;
+      margin-top: 15px;
+      color: #333;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .reviews-widget
+      .reviews-grid
+      .review-card
+      .review-content
+      .review-link:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 1200px) {
-      .review-card {
+      .reviews-widget .reviews-grid .review-card {
         flex: 0 1 calc(50% - 1px);
         width: calc(50% - 1px);
       }
     }
 
     @media (max-width: 768px) {
-      .review-card {
+      .reviews-widget .reviews-grid .review-card {
         flex: 0 1 100%;
         width: 100%;
       }

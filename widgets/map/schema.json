@@ -50,12 +50,6 @@
         "label": "Map Settings",
         "settings": [
           {
-            "type": "text",
-            "label": "Map Location Name",
-            "id": "mapLocationName",
-            "default": "Baldwin Brass Center Showroom"
-          },
-          {
             "type": "input",
             "label": "Map Embed URL",
             "id": "mapUrl",

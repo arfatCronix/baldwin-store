@@ -1,4 +1,5 @@
-  [
+
+[
   {
     "type": "array",
     "label": "Reviews",
@@ -20,33 +21,43 @@
                 "default": ""
               },
               {
-                "type": "input",
+                "type": "text",
                 "label": "Review Text",
                 "id": "reviewText",
                 "default": ""
               },
               {
-                "type": "number",
-                "label": "Rating",
-                "id": "rating",
-                "default": 5,  
-                "min": 0,
-                "max": 5,
-                "force_reload": true,
-                "typeMeta": {
-                  "displayType": "stepper"
-                }
-              },            
+                "type": "input",
+                "label": "Link Text",
+                "id": "linkText",
+                "default": ""
+              },
+              {
+                "type": "input",
+                "label": "Link URL",
+                "id": "linkUrl",
+                "default": ""
+              },
               {
                 "type": "imageManager",
-                "label": "Background Image",
-                "id": "backgroundImage",
+                "label": "Image or SVG",
+                "id": "reviewerImage",
                 "default": {
                   "type": "IMAGE_MANAGER",
                   "src": ""
                 },
                 "typeMeta": {
-                  "placeholder": "Select or upload an image"
+                  "placeholder": "Select or upload an image or SVG",
+                  "acceptedFileTypes": ["image/*", "image/svg+xml"]
+                }
+              },
+              {
+                "type": "textarea",
+                "label": "SVG Path Data",
+                "id": "svgPath",
+                "default": "",
+                "typeMeta": {
+                  "placeholder": "<svg>...</svg>"
                 }
               }
             ]
@@ -66,40 +77,41 @@
             "type": "select",
             "label": "Reviews per row",
             "id": "reviewsPerRow",
-            "default": "3",
-            "typeMeta": {
-              "selectOptions": [
-                {"label": "2", "value": "2"},
-                {"label": "3", "value": "3"},
-                {"label": "4", "value": "4"}
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "label": "Colors",
-        "settings": [
-          {
-            "type": "color",
-            "label": "Star color",
-            "id": "starColor",
-            "default": "#FFD700"
-          },
-          {
-            "type": "color",
-            "label": "Text color",
-            "id": "textColor",
-            "default": "#333333"
-          },
-          {
-            "type": "color",
-            "label": "Background color",
-            "id": "backgroundColor",
-            "default": "#FFFFFF"
-          }
-        ]
-      }
-    ]
-  }
+            "default": "",
+   
+             "typeMeta": {
+               "selectOptions": [
+                 {"label": "2", "value": "2"},
+                 {"label": "3", "value": "3"},
+                 {"label": "4", "value": "4"}
+               ]
+             }
+           }
+         ]
+       },
+       {
+         "label": "Colors",
+         "settings": [
+           { 
+             "type": "color",
+             "label": "Star color",
+             "id": "starColor",
+             "default": "#FFD700"
+           },
+           { 
+             "type": "color",
+             "label": "Text color",
+             "id": "textColor",
+             "default": "#333333"
+           },
+           { 
+             "type": "color",
+             "label": "Background color",
+             "id": "backgroundColor",
+             "default": "#FFFFFF"
+           }
+         ]
+       }
+     ]
+   }
 ]

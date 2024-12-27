@@ -13,7 +13,7 @@
     {
       "rating": {
         "value": 5,
-        "type": "integer"
+        "type": "integer" 
       },
       "backgroundImage": {
         "type": "IMAGE_MANAGER",
