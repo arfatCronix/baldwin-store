@@ -32,121 +32,101 @@
     {{/each}}
   </div>
   <style>
-      .about-us-widget,
-      .about-us-widget .about-us-grid,
-      .about-us-widget .about-us-card {
-        background-color: {{backgroundColor}};
-        color: {{textColor}};
-        padding: 20px 0;
-        width: 100%;
-        margin: 0;
-        text-align: center;
-      }
+         .about-us-widget,
+    .about-us-grid,
+    .about-us-card {
+      background-color: {{backgroundColor}};
+      color: {{textColor}};
+      padding: 20px 0;
+      width: 100%;
+      margin: 0;
+    }
 
-      .about-us-grid,
-      .about-us-widget .about-us-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
+    .about-us-widget {
+      text-align: center;
+    }
 
-      .about-us-card,
-      .about-us-widget .about-us-card,
-      .about-us-grid .about-us-card {
-        flex: 0 1 calc(33.333% - 1px);
-        box-sizing: border-box;
-        padding: 60px 70px;
-        border-radius: 2px;
-        background: #f7f7f7;
-        min-width: 250px;
-        height: auto; /* Adjusted for flexibility */
-        border-right: 1px solid #d7d7d7;
-        text-align: left; /* Moved text alignment here */
-      }
+    .about-us-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
-      .team-member-avatar,
-      .about-us-card .team-member-avatar,
-      .about-us-widget .team-member-avatar {
-        width: 48px;
-        height: 48px;
-        margin-bottom: 15px;
-        background: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      }
+    .about-us-card {
+      flex: 0 1 calc(33.333% - 1px);
+      box-sizing: border-box;
+      padding: 60px 70px;
+      border-radius: 2px;
+      background: #f7f7f7;
+      min-width: 250px;
+      height: auto;
+      border-right: 1px solid #d7d7d7;
+      text-align: left;
+    }
 
-      .team-member-avatar img,
-      .svg-container,
-      .about-us-card .team-member-avatar img,
-      .about-us-widget .team-member-avatar img,
-      .about-us-card .svg-container,
-      .about-us-widget .svg-container {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+    .team-member-avatar {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 15px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
 
-      .svg-container,
-      .about-us-card .svg-container,
-      .about-us-widget .svg-container {
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
+    .team-member-avatar img,
+    .svg-container {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-      .member-name,
-      .about-us-card .member-name,
-      .about-us-widget .member-name {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: #333;
-      }
+    .svg-container {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
-      .member-bio,
-      .about-us-card .member-bio,
-      .about-us-widget .member-bio {
-        font-size: 16px;
-        line-height: 1.5;
-        color: #333;
-      }
+    .member-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
 
-      .member-link,
-      .about-us-card .member-link,
-      .about-us-widget .member-link {
-        display: inline-block;
-        margin-top: 15px;
-        color: #333;
-        text-decoration: underline;
-        font-weight: bold;
-      }
+    .member-bio {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+    }
 
-      .member-link:hover,
-      .about-us-card .member-link:hover,
-      .about-us-widget .member-link:hover {
-        text-decoration: underline; /* Hover effect consolidated */
-      }
+    .member-link {
+      display: inline-block;
+      margin-top: 15px;
+      color: #333;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .member-link:hover {
+      text-decoration: underline;
+    }
 
     @media (max-width: 1200px) {
-        .about-us-card,
-        .about-us-widget .about-us-card,
-        .about-us-grid .about-us-card {
-          flex-basis: calc(50% - 1px);
-          width: calc(50% - 1px);
-          margin-bottom: 20px; /* Added spacing for smaller screens */
-          border-right-width: 0; /* Adjust for smaller layouts */
-        }
+      .about-us-card {
+        flex-basis: calc(50% - 1px);
+        width: calc(50% - 1px);
+        margin-bottom: 20px;
+        border-right-width: 0;
+      }
     }
 
     @media (max-width: 768px) {
-        .about-us-card,
-        .about-us-widget .about-us-card,
-        .about-us-grid .about-us-card {
-          flex-basis: calc(100%);
-          width: calc(100%);
-        }
+      .about-us-card {
+        flex-basis: 100%;
+        width: 100%;
+      }
     }
   </style>
 </div>

@@ -41,17 +41,13 @@
   </div>
 
   <style>
-    .contact-info-widget,
-    .contact-info-widget.contact-info-widget,
-    .contact-info-widget.contact-info-widget.contact-info-widget {
+    .contact-info-widget {
       max-width: 1200px;
       margin: 0 auto;
       padding: 60px 140px;
     }
 
-    .widget-heading,
-    .widget-heading.widget-heading,
-    .widget-heading.widget-heading.widget-heading {
+    .widget-heading {
       color: #000;
       width: 380px;
       font-family: Teko;
@@ -65,108 +61,69 @@
       margin-bottom: 30px;
     }
 
-    .contact-info,
-    .contact-info.contact-info,
-    .contact-info.contact-info.contact-info {
+    .contact-info {
       display: flex;
       gap: 60px;
       min-height: 400px;
     }
 
     .left-column,
-    .left-column.left-column,
-    .left-column.left-column.left-column {
+    .right-column {
       flex: 1;
       width: 50%;
     }
 
-    .right-column,
-    .right-column.right-column,
-    .right-column.right-column.right-column {
-      flex: 1;
-      width: 50%;
-    }
-
-    .contact-details,
-    .contact-details.contact-details,
-    .contact-details.contact-details.contact-details {
+    .contact-details {
       color: #000;
       font-size: 16px;
       font-style: normal;
       line-height: 150%;
     }
 
-    .contact-details strong,
-    .contact-details strong.contact-details strong,
-    .contact-details strong.contact-details strong.contact-details strong {
+    .contact-details strong {
       font-weight: 600;
     }
 
-    .contact-details .light-text,
-    .contact-details .light-text.contact-details .light-text,
-    .contact-details
-      .light-text.contact-details
-      .light-text.contact-details
-      .light-text {
+    .contact-details .light-text {
       font-weight: 300;
     }
 
-    /* Remove underline from links */
     .light-text a {
-      text-decoration: none; /* No underline */
-      color: inherit; /* Inherit color from parent */
+      text-decoration: none;
+      color: inherit;
     }
 
-    .contact-details > div,
-    .contact-details > div.contact-details > div,
-    .contact-details > div.contact-details > div.contact-details > div {
+    .contact-details > div {
       margin-bottom: 15px;
       line-height: 1.5;
     }
 
-    .map-container,
-    .map-container.map-container,
-    .map-container.map-container.map-container {
+    .map-container {
       height: 100%;
       min-height: 400px;
       width: 440px;
     }
 
-    .address,
-    .address.address,
-    .address.address.address {
+    .address {
       padding: 0;
     }
 
     @media (max-width: 768px) {
-      .contact-info-widget,
-      .contact-info-widget.contact-info-widget,
-      .contact-info-widget.contact-info-widget.contact-info-widget {
+      .contact-info-widget {
         padding: 20px;
       }
 
-      .contact-info,
-      .contact-info.contact-info,
-      .contact-info.contact-info.contact-info {
+      .contact-info {
         flex-direction: column;
         gap: 30px;
       }
 
       .left-column,
-      .left-column.left-column,
-      .left-column.left-column.left-column {
+      .right-column {
         width: 100%;
       }
 
-      .right-column,
-      .right-column.right-column,
-      .right-column.right-column.right-column {
-        width: 100%;
-      }
-
-      .map-container,
-      .map-container.map-container,
-      .map-container.map-container.map-container {
+      .map-container {
         min-height: 300px;
       }
     }
