@@ -1,147 +1,152 @@
-<div
-  class="reviews-widget"
-  style="background-color: {{backgroundColor}}; color: {{textColor}};"
->
-  <div class="reviews-grid reviews-{{reviewsPerRow}}">
-    {{#each reviews}}
-    <div class="review-card">
-      <div class="review-inner">
-        <div class="reviewer-avatar">
-          {{#if reviewerImage.src}} {{#if (isSvg reviewerImage.src)}}
-          <div
-            class="svg-container"
-            style="background-image: url('{{getImage reviewerImage.src}}');"
-          ></div>
-          {{else}}
-          <img
-            src="{{getImage reviewerImage.src}}"
-            alt="{{reviewerName}}"
-            class="reviewer-image"
-          />
-          {{/if}} {{/if}}
-        </div>
-
-        <div class="review-content">
-          <h3 class="review-title">{{reviewerName}}</h3>
-          <p class="review-text">{{reviewText}}</p>
-          {{#if linkText}}
-          <a
-            href="{{linkUrl}}"
-            class="review-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            >{{linkText}}</a
-          >
-          {{/if}}
-        </div>
+<div class="about-us-widget">
+  <div class="about-us-grid about-us-{{aboutUsPerRow}}">
+    {{#each aboutUsEntries}}
+    <div class="about-us-card">
+      <div class="team-member-avatar">
+        {{#if memberImage.src}} {{#if (isSvg memberImage.src)}}
+        <div
+          class="svg-container"
+          style="background-image: url('{{getImage memberImage.src}}');"
+        ></div>
+        {{else}}
+        <img
+          src="{{getImage memberImage.src}}"
+          alt="{{memberName}}"
+          class="team-member-image"
+        />
+        {{/if}} {{/if}}
       </div>
+
+      <h3 class="member-name">{{memberName}}</h3>
+      <p class="member-bio">{{memberBio}}</p>
+      {{#if linkText}}
+      <a
+        href="{{linkUrl}}"
+        class="member-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        >{{linkText}}</a
+      >
+      {{/if}}
     </div>
     {{/each}}
   </div>
   <style>
-    .reviews-widget {
-      padding: 20px 0;
-      width: 100%;
-      margin: 0;
-      text-align: center;
-      padding-top: 0;
-    }
+      .about-us-widget,
+      .about-us-widget .about-us-grid,
+      .about-us-widget .about-us-card {
+        background-color: {{backgroundColor}};
+        color: {{textColor}};
+        padding: 20px 0;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+      }
 
-    .reviews-widget .reviews-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+      .about-us-grid,
+      .about-us-widget .about-us-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
 
-    .reviews-widget .reviews-grid .review-card {
-      flex: 0 1 calc(33.333% - 1px);
-      box-sizing: border-box;
-      padding: 60px 70px;
-      border-radius: 2px;
-      background: #f7f7f7;
-      min-width: 250px;
-      width: calc(33.333% - 1px);
-      height: 488px;
-      border-right: 1px solid #d7d7d7;
-    }
+      .about-us-card,
+      .about-us-widget .about-us-card,
+      .about-us-grid .about-us-card {
+        flex: 0 1 calc(33.333% - 1px);
+        box-sizing: border-box;
+        padding: 60px 70px;
+        border-radius: 2px;
+        background: #f7f7f7;
+        min-width: 250px;
+        height: auto; /* Adjusted for flexibility */
+        border-right: 1px solid #d7d7d7;
+        text-align: left; /* Moved text alignment here */
+      }
 
-    .reviews-widget .reviews-grid .review-card .review-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
+      .team-member-avatar,
+      .about-us-card .team-member-avatar,
+      .about-us-widget .team-member-avatar {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 15px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
 
-    .reviews-widget .reviews-grid .review-card .reviewer-avatar {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 15px;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+      .team-member-avatar img,
+      .svg-container,
+      .about-us-card .team-member-avatar img,
+      .about-us-widget .team-member-avatar img,
+      .about-us-card .svg-container,
+      .about-us-widget .svg-container {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-    .reviews-widget .reviews-grid .review-card .reviewer-avatar img,
-    .reviews-widget .reviews-grid .review-card .reviewer-avatar .svg-container {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+      .svg-container,
+      .about-us-card .svg-container,
+      .about-us-widget .svg-container {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
-    .reviews-widget .reviews-grid .review-card .reviewer-avatar .svg-container {
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+      .member-name,
+      .about-us-card .member-name,
+      .about-us-widget .member-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+      }
 
-    .reviews-widget .reviews-grid .review-card .review-content {
-      text-align: left;
-    }
+      .member-bio,
+      .about-us-card .member-bio,
+      .about-us-widget .member-bio {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+      }
 
-    .reviews-widget .reviews-grid .review-card .review-content .review-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #333;
-      margin-top: 0;
-    }
+      .member-link,
+      .about-us-card .member-link,
+      .about-us-widget .member-link {
+        display: inline-block;
+        margin-top: 15px;
+        color: #333;
+        text-decoration: underline;
+        font-weight: bold;
+      }
 
-    .reviews-widget .reviews-grid .review-card .review-content .review-text {
-      font-size: 16px;
-      line-height: 1.5;
-      color: #333;
-      margin: 0;
-    }
-
-    .reviews-widget .reviews-grid .review-card .review-content .review-link {
-      display: inline-block;
-      margin-top: 15px;
-      color: #333;
-      text-decoration: underline;
-      font-weight: bold;
-    }
-
-    .reviews-widget
-      .reviews-grid
-      .review-card
-      .review-content
-      .review-link:hover {
-      text-decoration: underline;
-    }
+      .member-link:hover,
+      .about-us-card .member-link:hover,
+      .about-us-widget .member-link:hover {
+        text-decoration: underline; /* Hover effect consolidated */
+      }
 
     @media (max-width: 1200px) {
-      .reviews-widget .reviews-grid .review-card {
-        flex: 0 1 calc(50% - 1px);
-        width: calc(50% - 1px);
-      }
+        .about-us-card,
+        .about-us-widget .about-us-card,
+        .about-us-grid .about-us-card {
+          flex-basis: calc(50% - 1px);
+          width: calc(50% - 1px);
+          margin-bottom: 20px; /* Added spacing for smaller screens */
+          border-right-width: 0; /* Adjust for smaller layouts */
+        }
     }
 
     @media (max-width: 768px) {
-      .reviews-widget .reviews-grid .review-card {
-        flex: 0 1 100%;
-        width: 100%;
-      }
+        .about-us-card,
+        .about-us-widget .about-us-card,
+        .about-us-grid .about-us-card {
+          flex-basis: calc(100%);
+          width: calc(100%);
+        }
     }
   </style>
 </div>

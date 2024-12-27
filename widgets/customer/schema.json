@@ -1,29 +1,28 @@
-
 [
   {
     "type": "array",
-    "label": "Reviews",
-    "id": "reviews",
+    "label": "CARDS",
+    "id": "aboutUsEntries",
     "defaultCount": 3,
     "entryLabel": "Review",
     "schema": [
       {
         "type": "tab",
-        "label": "Review Content",
+        "label": "About Card Content",
         "sections": [
           {
             "label": "Review Details",
             "settings": [
               {
                 "type": "input",
-                "label": "Reviewer Name",
-                "id": "reviewerName",
+                "label": "Card title",
+                "id": "memberName",
                 "default": ""
               },
               {
                 "type": "text",
-                "label": "Review Text",
-                "id": "reviewText",
+                "label": "Card Description",
+                "id": "memberBio",
                 "default": ""
               },
               {
@@ -39,22 +38,34 @@
                 "default": ""
               },
               {
+                "type": "select",
+                "label": "Media Type",
+                "id": "mediaType",
+                "default": "image",
+                "typeMeta": {
+                  "selectOptions": [
+                    { "label": "Image", "value": "image" },
+                    { "label": "SVG", "value": "svg" }
+                  ]
+                }
+              },
+              {
                 "type": "imageManager",
-                "label": "Image or SVG",
-                "id": "reviewerImage",
+                "label": " Image",
+                "id": "memberImage",
                 "default": {
                   "type": "IMAGE_MANAGER",
                   "src": ""
                 },
                 "typeMeta": {
-                  "placeholder": "Select or upload an image or SVG",
-                  "acceptedFileTypes": ["image/*", "image/svg+xml"]
+                  "placeholder": "Select or upload an image",
+                  "acceptedFileTypes": ["image/*"]
                 }
               },
               {
                 "type": "textarea",
                 "label": "SVG Path Data",
-                "id": "svgPath",
+                "id": "svgPathData",
                 "default": "",
                 "typeMeta": {
                   "placeholder": "<svg>...</svg>"
@@ -77,41 +88,40 @@
             "type": "select",
             "label": "Reviews per row",
             "id": "reviewsPerRow",
-            "default": "",
-   
-             "typeMeta": {
-               "selectOptions": [
-                 {"label": "2", "value": "2"},
-                 {"label": "3", "value": "3"},
-                 {"label": "4", "value": "4"}
-               ]
-             }
-           }
-         ]
-       },
-       {
-         "label": "Colors",
-         "settings": [
-           { 
-             "type": "color",
-             "label": "Star color",
-             "id": "starColor",
-             "default": "#FFD700"
-           },
-           { 
-             "type": "color",
-             "label": "Text color",
-             "id": "textColor",
-             "default": "#333333"
-           },
-           { 
-             "type": "color",
-             "label": "Background color",
-             "id": "backgroundColor",
-             "default": "#FFFFFF"
-           }
-         ]
-       }
-     ]
-   }
+            "default": "3",
+            "typeMeta": {
+              "selectOptions": [
+                { "label": "2", "value": "2" },
+                { "label": "3", "value": "3" },
+                { "label": "4", "value": "4" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "label": "Colors",
+        "settings": [
+          {
+            "type": "color",
+            "label": "Star color",
+            "id": "starColor",
+            "default": "#FFD700"
+          },
+          {
+            "type": "color",
+            "label": "Text color",
+            "id": "textColor",
+            "default": "#333333"
+          },
+          {
+            "type": "color",
+            "label": "Background color",
+            "id": "backgroundColor",
+            "default": "#FFFFFF"
+          }
+        ]
+      }
+    ]
+  }
 ]
