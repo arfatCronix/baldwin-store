@@ -1,0 +1,55 @@
+<div class="hero-banner" style="background-image: url('{{backgroundImage.src}}')">
+    <div class="overlay" style="background-color: {{overlayColor}}">
+        <div class="content-wrapper">
+            <{{headingTag}} class="hero-heading">
+                {{headingText}}
+            </{{headingTag}}>
+        </div>
+    </div>
+
+    <style>
+        .hero-banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content-wrapper {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-heading {
+            color: #FFFFFF;
+            font-size: 48px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner {
+                height: 300px;
+            }
+            
+            .hero-heading {
+                font-size: 36px;
+            }
+        }
+    </style>
+</div>

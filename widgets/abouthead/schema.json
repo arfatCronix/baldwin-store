@@ -1,0 +1,61 @@
+[
+  {
+    "type": "tab",
+    "label": "Hero Banner",
+    "sections": [
+      {
+        "type": "section",
+        "label": "Background Settings",
+        "settings": [
+          {
+            "type": "imageManager",
+            "label": "Background Image",
+            "id": "backgroundImage",
+            "default": {
+              "src": "",
+              "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "type": "color",
+            "label": "Overlay Color",
+            "id": "overlayColor",
+            "default": "rgba(0,0,0,0.4)"
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "label": "Heading Settings",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Heading Text",
+            "id": "headingText",
+            "default": "ABOUT US"
+          },
+          {
+            "type": "select",
+            "label": "Heading Tag",
+            "id": "headingTag",
+            "default": "h1",
+            "typeMeta": {
+              "selectOptions": [
+                {
+                  "label": "H1",
+                  "value": "h1"
+                },
+                {
+                  "label": "H2",
+                  "value": "h2"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+
+  
+]

@@ -1,0 +1,14 @@
+{
+  "name": "Hero Banner Widget",
+  "version": "1.0.0",
+  "description": "A hero banner with background image and centered heading",
+  "template": "widget.html",
+  "schema": "schema.json",
+  "store_api": {
+    "path": "/v3/content/widgets",
+    "method": "POST"
+  },
+  "capabilities": {
+    "allow_in_regions": ["content"]
+  }
+}
