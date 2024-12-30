@@ -1,0 +1,150 @@
+[
+  {
+    "type": "tab",
+    "label": "Content",
+    "sections": [
+      {
+        "label": "Contact Information",
+        "settings": [
+          {
+            "type": "input",
+            "label": "Title",
+            "id": "contactTitle",
+            "default": "CONTACT US"
+          },
+          {
+            "type": "text",
+            "label": "Description",
+            "id": "contactDescription",
+            "default": "Please contact our Baldwin Sales and Service Team during our business hours. All team members are factory trained and certified in the products we carry and will be happy to assist you. For larger orders or pricing to outfit your entire home in Baldwin, please give us a call!"
+          },
+          {
+            "type": "input",
+            "label": "Hours Label",
+            "id": "hoursLabel",
+            "default": "Hours:"
+          },
+          {
+            "type": "input",
+            "label": "Hours Value",
+            "id": "hoursValue",
+            "default": "Monday - Friday, 10:00am - 5:30pm EST"
+          },
+          {
+            "type": "input",
+            "label": "Phone Label",
+            "id": "phoneLabel",
+            "default": "Phone:"
+          },
+          {
+            "type": "text",
+            "label": "Phone Number",
+            "id": "phone",
+            "default": "800-358-2468"
+          },
+          {
+            "type": "input",
+            "label": "Local Label",
+            "id": "localLabel",
+            "default": "Local:"
+          },
+          {
+            "type": "input",
+            "label": "Local Number",
+            "id": "localNumber",
+            "default": "610-373-1840"
+          },
+          {
+            "type": "input",
+            "label": "Email Label",
+            "id": "emailLabel",
+            "default": "Email:"
+          },
+          {
+            "type": "input",
+            "label": "Email Address",
+            "id": "emailAddress",
+            "default": "Sales@BaldwinBrassCenter.com"
+          },
+          {
+            "type": "input",
+            "label": "Address Label",
+            "id": "addressLabel",
+            "default": "Address:"
+          },
+          {
+            "type": "text",
+            "label": "Address",
+            "id": "address",
+            "default": "Baldwin Brass Center Showroom\n621 Penn Avenue\nWest Reading, PA 19611"
+          }
+        ]
+      },
+      {
+        "label": "Map",
+        "settings": [
+          {
+            "type": "input",
+            "label": "Map Embed URL",
+            "id": "mapUrl",
+            "default": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "hidden",
+    "settings": [
+      {
+        "id": "clockIcon",
+        "default": "https://cdn11.bigcommerce.com/s-taxcosnsew/images/stencil/original/image-manager/time.png?t=1735552898"
+      },
+      {
+        "id": "phoneIcon", 
+        "default": "https://cdn11.bigcommerce.com/s-taxcosnsew/images/stencil/original/image-manager/phone.png?t=1735553863"
+      },
+      {
+        "id": "localIcon",
+        "default": "https://cdn11.bigcommerce.com/s-taxcosnsew/images/stencil/original/image-manager/phone.png?t=1735553863"
+      },
+      {
+        "id": "emailIcon",
+        "default": "https://cdn11.bigcommerce.com/s-taxcosnsew/images/stencil/original/image-manager/email.png?t=1735553862"
+      },
+      {
+        "id": "addressIcon",
+        "default": "https://cdn11.bigcommerce.com/s-taxcosnsew/images/stencil/original/image-manager/location.png?t=1735553861"
+      }
+    ]
+  },  
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Colors",
+        "settings": [
+          {
+            "type": "color",
+            "label": "Background Color",
+            "id": "backgroundColor",
+            "default": "#FFFFFF"
+          },
+          {
+            "type": "color",
+            "label": "Text Color",
+            "id": "textColor",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "label": "Label Color",
+            "id": "labelColor",
+            "default": "#666666"
+          }
+        ]
+      }
+    ]
+  }
+]

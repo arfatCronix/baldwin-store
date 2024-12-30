@@ -1,0 +1,79 @@
+<style>
+  .customer-service-widget {
+    padding: 145px 145px 100px 145px;
+    background-color: {{backgroundColor}};
+    color: {{textColor}};
+  }
+
+  .service-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+  }
+
+  .service-left {
+    flex: 1;
+  }
+
+  .service-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .service-title {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .service-description {
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .store-image {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .store-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    .customer-service-widget {
+      padding: 60px 20px;
+    }
+
+    .service-container {
+      flex-direction: column;
+    }
+
+    .service-right {
+      gap: 30px;
+    }
+  }
+</style>
+
+<div class="customer-service-widget">
+  <div class="service-container">
+    <div class="service-left">
+      <h2 class="service-title">{{serviceTitle}}</h2>
+    </div>
+
+    <div class="service-right">
+      <div class="service-description">{{serviceDescription}}</div>
+      <div class="store-image">
+        <img src="{{storeImageUrl}}" alt="Baldwin Brass Center Store" />
+      </div>
+    </div>
+  </div>
+</div>

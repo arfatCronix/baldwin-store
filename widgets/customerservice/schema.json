@@ -1,0 +1,41 @@
+[
+  {
+    "type": "tab",
+    "label": "Content",
+    "sections": [
+      {
+        "label": "Left Section",
+        "settings": [
+          {
+            "type": "input",
+            "label": "Title",
+            "id": "serviceTitle",
+            "default": "CUSTOMER SERVICE"
+          }
+        ]
+      },
+      {
+        "label": "Right Section",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Description",
+            "id": "serviceDescription",
+            "default": "All Customer Service and Sales team members are committed to making your experience with Baldwin as simple and as enjoyable as possible. All team members are factory trained and certified to assist you with all of the products we offer online and in our showroom. Our staff and showroom are located in West Reading PA, allowing our sales professionals to physically handle and train with the products we sell. When you call us you are not contacting a call center; you can be assured that the we take our commitment to customer service seriously and will do everything we can to not only make sure your order is correct, but to quickly and efficiently resolve any problems that may arise before, during or after your order was placed."
+          }
+        ]
+      },
+      {
+        "label": "Image",
+        "settings": [
+          {
+            "type": "input",
+            "label": "Store Image URL",
+            "id": "storeImageUrl",
+            "default": "https://cdn11.bigcommerce.com/s-taxcosnsew/images/stencil/original/image-manager/customerservice.png?t=1735560034"
+          }
+        ]
+      }
+    ]
+  }
+]

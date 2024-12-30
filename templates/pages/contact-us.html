@@ -1,0 +1,212 @@
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-form-widget {
+    padding: 68px 148px;
+    background-color: #1c1c1c;
+    color: #fff;
+  }
+
+  .contact-form-container {
+    display: flex;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .form-left-section {
+    flex: 1;
+  }
+
+  .form-right-section {
+    flex: 2;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-row {
+    display: flex;
+    display: flex;
+    gap: 35px;
+  }
+
+  .form-row .form-field {
+    flex: 1;
+  }
+
+  .form-title {
+    margin-top: 4px;
+    color: white;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  .form-description {
+    color: rgb(255 255 255);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(255 255 255 / 82%);
+    padding: 12px 0;
+    color: #fff;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(255 255 255 / 82%);
+  }
+
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  #contact_question {
+    margin-bottom: 27px;
+  }
+
+  button {
+    padding: 12px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    align-self: flex-start;
+    margin-top: 5px;
+  }
+
+  button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .form-field {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .required::after {
+    content: "*";
+    color: #ffffff;
+    position: absolute;
+    top: 8px;
+    right: 0;
+  }
+</style>
+
+<div class="contact-form-widget">
+  <div class="contact-form-container">
+    <div class="form-left-section">
+      <h2 class="form-title">Send Us a Message!</h2>
+      <p class="form-description">
+        Fill out the form and a Baldwin expert will get back to you shortly.
+      </p>
+    </div>
+
+    <div class="form-right-section">
+      <form
+        data-contact-form
+        class="contact-form"
+        action="{{urls.contact_us_submit}}"
+        method="post"
+      >
+        {{inject 'contactEmail' (lang 'forms.validate.contact.email_address')}}
+        {{inject 'contactQuestion' (lang 'forms.validate.contact.question')}}
+        {{#if forms.contact.error}}
+        <div id="contact-us-error">
+          {{> components/common/alert/alert-error forms.contact.error}}
+        </div>
+        {{/if}}
+        <input
+          type="hidden"
+          name="page_id"
+          id="page_id"
+          value="{{forms.contact.page_id}}"
+        />
+
+        <div class="form-row">
+          {{#if forms.contact.name}}
+          <div class="form-field required">
+            <input
+              type="text"
+              id="contact_fullname"
+              name="contact_fullname"
+              value="{{customer.name}}"
+              placeholder="{{lang 'forms.contact_us.full_name'}}"
+              required
+            />
+          </div>
+          {{/if}}
+          <div class="form-field">
+            <input
+              type="text"
+              id="contact_lastname"
+              name="contact_lastname"
+              placeholder="Last Name"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field required">
+            <input
+              type="email"
+              id="contact_email"
+              name="contact_email"
+              value="{{customer.email}}"
+              placeholder="{{lang 'forms.contact_us.email'}}"
+              required
+            />
+          </div>
+          {{#if forms.contact.phone}}
+          <div class="form-field">
+            <input
+              type="tel"
+              id="contact_phone"
+              name="contact_phone"
+              value="{{customer.phone}}"
+              placeholder="{{lang 'forms.contact_us.phone'}}"
+            />
+          </div>
+          {{/if}}
+        </div>
+        <div class="form-field">
+          <textarea
+            name="contact_question"
+            id="contact_question"
+            rows="5"
+            placeholder="Comments"
+            required
+          ></textarea>
+        </div>
+
+        {{{forms.contact.recaptcha.markup}}}
+
+        <button type="submit">{{lang 'forms.contact_us.submit'}}</button>
+      </form>
+    </div>
+  </div>
+</div>

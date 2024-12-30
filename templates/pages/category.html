@@ -1,0 +1,70 @@
+---
+products:
+    featured:
+        limit: {{theme_settings.categorypage_featured_products_count}}
+category:
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{inject "categoryId" category.id}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{pagination.category.previous}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{pagination.category.next}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+<div class="category-banner">
+    <div class="category-detail">
+        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+        {{#unless theme_settings.hide_category_page_heading }}
+            <div class="category-title">
+                <h1 class="page-heading">{{category.name}}</h1>
+            </div>
+        {{/unless}}
+    </div>
+    {{#if category.image}}
+        <div class="category-image">
+            {{> components/common/responsive-img
+                image=category.image
+                fallback_size=theme_settings.zoom_size
+                lazyload=theme_settings.lazyload_mode
+                class="category-header-image"
+            }}
+        </div>
+    {{/if}}
+</div>
+{{{region name="category_below_header"}}}
+{{> components/products/category-featured products=products.featured columns=theme_settings.homepage_featured_products_column_count show_title=true plp=true}}
+<div class="page">
+    {{#if category.faceted_search_enabled}}
+        <aside class="page-sidebar" id="faceted-search-container">
+            {{> components/category/sidebar}}
+        </aside>
+    {{else if category.subcategories}}
+        <aside class="page-sidebar" id="faceted-search-container">
+            {{> components/category/sidebar}}
+        </aside>
+    {{else if theme_settings.shop_by_price_visibility}}
+        <aside class="page-sidebar" id="faceted-search-container">
+            {{> components/category/sidebar}}
+        </aside>
+    {{/if}}
+
+    <main class="page-content" id="product-listing-container">
+        {{> components/category/product-listing}}
+        {{{category.description}}}
+    </main>
+
+    <div class="page-region">
+        {{{region name="category_below_content"}}}
+    </div>
+</div>
+
+
+{{/partial}}
+{{> layout/base}}

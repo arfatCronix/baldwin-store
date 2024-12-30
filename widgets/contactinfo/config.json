@@ -1,0 +1,12 @@
+{
+  "name": "Contact Information Widget",
+  "version": "1.0.0",
+  "description": "A customizable contact information widget with map integration",
+  "supportedVersions": ["1.0.0"],
+  "settings": {
+    "fields": {
+      "required": ["contactTitle", "address", "mapUrl"],
+      "optional": []
+    }
+  }
+}
