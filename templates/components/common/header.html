@@ -1,0 +1,146 @@
+<a href="#main-content" class="skip-to-main-link">{{lang 'header.skip_to_main'}}</a>
+{{#if banners.top}}
+<div class="banners" data-banner-location="top">
+    {{#each (limit banners.top_metadata 1)}}
+    <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-banner-id="{{this.banner-name}}">
+        <div data-event-type="promotion-click">
+            {{{this.content}}}
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/if}}
+<header class="header" role="banner">
+    
+    {{> components/common/navigation}}
+
+    <div class="header-logo-wrapper">
+        <div class="container header-container">
+            <div class="header-left">
+                <ul class="navUser-section navUser-section--left">
+                    <li class="navUser-item">
+                        <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+                            <span class="mobileMenu-toggleIcon">Toggle menu</span>
+                        </a>
+                    </li>
+                </ul>
+                {{> components/common/quick-search name='nav-quick-search'}}
+            </div>
+            {{#if page_type '===' 'default'}}
+                <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
+                    {{> components/common/store-logo}}
+                </h1>
+            {{else}}
+                <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+                    {{> components/common/store-logo}}
+                </div>
+            {{/if}}
+            <ul class="navUser-section navUser-section--right">
+                {{#if settings.show_wishlist}}
+                    <li class="navUser-item navUser-item--wishlist">
+                        <a class="navUser-action"
+                        href="{{urls.account.wishlists.all}}"
+                        aria-label="{{lang 'account.nav.wishlist'}}"
+                        >
+                            <svg class="navUser-icon icon icon-wishlist">
+                                <use href="#icon-wishlist" />
+                            </svg>
+                            <span class="hidden">{{lang 'account.nav.wishlist'}}</span>
+                        </a>
+                    </li>
+                {{/if}}                
+                <li class="navUser-item navUser-item--projects">
+                    <a class="navUser-action"
+                    href="/"
+                    aria-label="{{lang 'account.nav.my_projects'}}"
+                    >
+                        {{lang 'account.nav.my_projects'}}
+                        <span class="projectsPill project-quantity">1</span>
+                    </a>
+                </li>
+                <li class="navUser-item navUser-item--account">
+                        <a class="navUser-action"
+                        href="{{urls.account.index}}"
+                        aria-label="{{#if customer}}{{lang 'common.account'}}{{else}}{{lang 'common.login'}}{{/if}}"
+                        >
+                            <svg class="navUser-icon icon icon-user">
+                                <use href="#icon-user" />
+                            </svg> 
+                            <span class="hidden">{{lang 'common.login'}}</span>
+                            <svg class="navUser-icon icon icon-dropdown">
+                                <use href="#icon-dropdown" />
+                            </svg> 
+                        </a>
+                        <div class="account-links">
+                          <ul>
+                            <li>
+                                <a class="navUser-action"
+                                href="{{urls.auth.login}}"
+                                aria-label="{{lang 'common.login'}}"
+                                >
+                                    {{lang 'common.login'}}
+                                </a>
+                            </li>
+                            <li>
+                                <a class="navUser-action"
+                                href="{{urls.auth.create_account}}"
+                                aria-label="{{lang 'common.sign_up'}}"
+                                >
+                                    {{lang 'common.sign_up'}}
+                                </a>
+                            </li>
+                            <li>
+                                <a class="navUser-action"
+                                href="/"
+                                aria-label="{{lang 'account.nav.become_pro'}}"
+                                >
+                                    {{lang 'account.nav.become_pro'}}
+                                </a>
+                            </li>
+                            <li>
+                                <a class="navUser-action"
+                                href="/"
+                                aria-label="{{lang 'account.nav.my_projects'}}"
+                                >
+                                    {{lang 'account.nav.my_projects'}}
+                                </a>
+                            </li>
+                            <li>
+                                <a class="navUser-action"
+                                href="{{urls.account.orders.all}}"
+                                aria-label="{{lang 'account.nav.order_status'}}"
+                                >
+                                    {{lang 'account.nav.order_status'}}
+                                </a>
+                            </li>
+                          </ul>  
+                        </div>
+                </li>
+                <li class="navUser-item navUser-item--cart">
+                    <a class="navUser-action"
+                    data-cart-preview
+                    data-dropdown="cart-preview-dropdown"
+                    data-options="align:right"
+                    href="{{urls.cart}}"
+                    aria-label="{{lang 'cart.nav_aria_label'}}"
+                    >
+                        <svg class="navUser-icon icon icon-cart">
+                            <use href="#icon-cart" />
+                        </svg>
+                        <span class="navUser-item-cartLabel hidden">{{lang 'common.cart'}}</span>
+                        <span class="countPill cart-quantity"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>    
+    <div class="dropdown-menu" id="cart-preview-dropdown" aria-hidden="true"></div>
+    <div class="slideCartOverlay"></div>
+
+    <div class="navPages-container" id="menu" data-menu>
+        {{> components/common/navigation-menu}}
+    </div>
+    {{{region name="header_navigation_bottom--global"}}}
+</header>
+{{{region name="header_bottom--global"}}}
+{{{region name="header_bottom"}}}
