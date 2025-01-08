@@ -95,6 +95,13 @@
   }
 }
 
+// primary button border
+.body {
+  .button--primary {
+    border: 1px solid stencilColor("color-black");
+  }
+}
+
 // end buttons
 
 //social links

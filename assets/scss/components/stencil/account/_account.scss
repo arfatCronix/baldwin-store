@@ -221,6 +221,8 @@
             margin: 0;
             padding: 0;
             width: spacing("single");
+            
+
         }
     }
 
@@ -424,4 +426,32 @@
 
 .account-downloadsItem-availability {
     color: stencilColor("color-textSecondary");
+}
+
+
+// OVERRIDE CHANGES
+
+.form-label {
+    color: stencilColor("form-label-color");
+}
+
+.form-actions {
+    display: flex ;
+    align-items: center;
+}
+
+.new-customer-fact-list {
+    margin-left: spacing("single");
+}
+
+.login-form{
+    margin-top: spacing("single");
+}
+
+@media screen and (max-width:480px) {
+    
+    .form-actions {
+       
+        flex-direction: column;
+    }
 }

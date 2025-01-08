@@ -130,3 +130,69 @@
         width: 100%;
     }
 }
+
+// changes in code 
+
+
+.compareTable-removeProduct {
+    top: remCalc(-2.1); // -1rem
+   
+}
+
+.card-figure {
+    overflow: visible;
+    border: 1px solid stencilColor("border-compare-color");
+    padding: spacing("half");
+    margin-bottom: 0;
+    height: auto;
+    
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+.card-img-container::after {
+    padding-bottom: remCalc(335);
+}
+
+.page-heading {
+    text-align: left;
+    font-size: remCalc(64); // 4rem
+    padding-top: remCalc(48); // 3rem
+    padding-bottom: remCalc(32); // 2rem
+    border-bottom: 1px solid stencilColor("border-compare-color");
+}
+
+.card-body {
+    text-align: center;
+}
+
+.compareTable-heading,
+.compareTable-item {
+    border-bottom: 1px solid stencilColor("border-compare-color");
+    padding-bottom: spacing("base");
+    margin-bottom: spacing("base");
+}
+
+.compareTable-heading {
+    border-top: 0;
+    border-bottom: 0;
+    font-size: remCalc(20.8); // 1.3rem
+}
+
+.compareTable-item {
+    &:first-child {
+        border-top: 0;
+        border-bottom: 0;
+    }
+}
+
+.card-title {
+    
+    font-family: "Barlow", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+       
+   }

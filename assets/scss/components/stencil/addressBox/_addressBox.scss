@@ -105,7 +105,7 @@
 }
 
 .address-label {
-    color: stencilColor("color-textSecondary");
+    
     font-weight: fontWeight("normal");
 }
 
@@ -143,3 +143,52 @@
     font-size: fontSize("hero");
     line-height: 1;
 }
+
+
+
+// changes in code 
+
+.panel--address {
+    height: 350px;  
+   
+    .panel-body {
+        height: 100%;  
+        padding: spacing("single");
+        display: flex;  
+        flex-direction: column; 
+        justify-content: space-between;  
+    }
+
+    .form-actions {
+        margin-top: auto; 
+        width: calc(100% - 2 * spacing("single"));  
+        display: flex; 
+        justify-content: stretch; 
+        align-items: self-end; 
+        gap: .3rem;  
+        position: static;
+
+        .button {
+            flex: 1;  
+            text-align: center;  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+        }
+    }
+}
+
+
+.panel--newAddress {
+    height: 350px; 
+    background-color: #dddddd;
+
+    .panel-body {
+        height: 100%; 
+        display: flex; 
+        align-items: center;  
+        justify-content: center; 
+    }
+}
+    
+
