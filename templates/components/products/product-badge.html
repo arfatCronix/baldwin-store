@@ -1,0 +1,21 @@
+{{#if badge_view '===' 'sash'}}
+    <div class="{{badge-type}}-flag-sash">
+        <span class="{{badge-type}}-text">{{{badge_label}}}</span>
+    </div>
+{{else if badge_view '===' 'topleft'}}
+    <div class="{{badge-type}}-flag-side badge-at-top-left">
+        <span class="{{badge-type}}-text">
+            {{#if badge-type '===' 'sale'}}
+                <svg class="icon sale-icon">
+                    <use href="#icon-sale" />
+                </svg>
+            {{/if}}
+            {{{badge_label}}}
+        </span>
+    </div>
+{{else if badge_view '===' 'burst'}}
+    <div class="starwrap">
+        <div class="{{badge-type}}-text-burst">{{{badge_label}}}</div>
+        <div class="{{badge-type}}-flag-star"></div>
+    </div>
+{{/if}}

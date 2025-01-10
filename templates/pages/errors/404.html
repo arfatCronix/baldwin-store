@@ -1,0 +1,17 @@
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<main class="pagen error-page-wrapper">
+    <section class="page-content page-content--centered">
+        <h1 class="page-heading">{{lang 'page_not_found.page_heading'}}</h1>
+        <p class="u-textAlignCenter">
+            {{lang 'page_not_found.message'}}
+        </p>
+
+        {{> components/common/search-box}}
+    </section>
+</main>
+
+{{/partial}}
+{{> layout/base}}

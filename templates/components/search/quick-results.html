@@ -1,0 +1,27 @@
+{{#if product_results.products}}
+    <ul class="productList" data-list-name="Quick Search Results">
+        {{#each product_results.products}}
+            {{#if @index '<' 5}}
+                <li class="product">
+                    {{>components/products/list-item-search
+                        hide_product_quick_view=true
+                        show_compare=../show_compare 
+                        show_rating= false
+                        theme_settings=../theme_settings 
+                        customer=../customer 
+                        event="list"
+                        alternate=true
+                        settings=../settings 
+                        position=(add @index 1)}}
+                </li>
+            {{/if}}
+        {{/each}}
+    </ul>
+    <div class="view-all-results">
+        <a href="/search.php?search_query={{forms.search.query}}" class="button button--secondary">{{lang 'common.view_all'}}</a>
+    </div>
+{{else}}
+    <p class="quickSearchMessage">
+        {{{lang 'search.results.quick_count' count=pagination.product_results.total search_query=(sanitize forms.search.query) }}}
+    </p>
+{{/if}}
