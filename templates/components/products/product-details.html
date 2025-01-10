@@ -1,0 +1,11 @@
+<div class="productDetails-customSection">
+  <div class="productDetails-info">
+    <h2 class="productDetails-title">DETAILS</h2>
+    <div class="productDetails-list">{{{product.description}}}</div>
+  </div>
+  <div class="productDetails-image">
+    {{#filter product.custom_fields 'Product feature image' property='name'}}
+    <img src="{{value}}" alt="Product Details" loading="lazy" />
+    {{/filter}}
+  </div>
+</div>

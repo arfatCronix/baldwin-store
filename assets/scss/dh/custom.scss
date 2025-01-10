@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 // Hero Carousel Styles Start
 .heroCarousel-slide {
     .heroCarousel-image {
@@ -92,5 +99,66 @@
 .quickSearchResults {
     .sale-flag-side {
         display: none;
+    }
+}
+
+
+
+// product details styles
+
+.productDetails-customSection {
+    display: flex;
+    flex-direction: column;
+    gap: spacing("double");
+    margin: 0 auto spacing("double");
+    max-width: 1148px;
+    padding: 0 spacing("base");
+    
+    @include breakpoint("medium") {
+        flex-direction: row;
+        gap: spacing("triple");
+    }
+}
+
+.productDetails-list p {
+    display: none;
+}
+
+.productDetails-list ul li {
+    margin-bottom: spacing("base"); // Adds 20px gap between list items
+}
+
+
+.productDetails-list ul li span {
+    font-family: stencilFontFamily("body-font");
+    
+ 
+}
+
+.productDetails-info {
+    flex: 1;
+    order: 2; // Added to show second on mobile
+
+    
+    @include breakpoint("medium") {
+        width: 50%;
+        order: 1; // Reset order on desktop
+    }
+}
+
+.productDetails-image {
+    flex: 1;
+    order: 1; // Added to show first on mobile
+    
+    @include breakpoint("medium") {
+        width: 50%;
+        order: 2; // Reset order on desktop
+    }
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: radius("small");
     }
 }
