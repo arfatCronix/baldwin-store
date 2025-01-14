@@ -1044,5 +1044,12 @@
     "privacy_policy": "Privacy Policy",
     "allow_category_tracking": "Allow [CATEGORY_NAME] tracking",
     "disallow_category_tracking": "Disallow [CATEGORY_NAME] tracking"
+  },
+    "product": {
+    "details_heading": "DETAILS",
+    "specifications": "SPECIFICATIONS",
+    "no_description": "No description available", 
+    "details_image_alt": "Product Details",
+    "no_image": "No image available"
   }
 }

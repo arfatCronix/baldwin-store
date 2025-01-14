@@ -480,6 +480,7 @@
         "color-error": "#ff957f",
         "color-errorLight": "#ffdddd",
         "color-info": "#666666",
+        "specs":"#000",
         "color-infoLight": "#dfdfdf",
         "color-success": "#8adf8f",
         "color-successLight": "#d5ffd8",

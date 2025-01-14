@@ -816,6 +816,7 @@
     "pl": "Tło ładowania modalnego",
     "ja": "モーダルローディング背景"
   },
+
   "i18n.ProductThumbnailLoadingBackground": {
     "default": "Product thumbnail loading background",
     "fr": "Arrière-plan de chargement de l'image miniature du produit",
