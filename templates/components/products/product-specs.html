@@ -1,0 +1,46 @@
+<div class="productSpecs-section">
+  <div class="container">
+    <div class="productSpecs-image">
+      {{#filter product.custom_fields 'Product Specification image'
+      property='name'}}
+      <img src="{{value}}" alt="Product Specifications" loading="lazy" />
+      {{/filter}}
+    </div>
+    <div class="productSpecs-info">
+      <h2 class="productSpecs-title">
+        {{lang "product.specifications" default="SPECIFICATIONS"}}
+      </h2>
+      <div class="productSpecs-list">
+        {{#filter product.custom_fields 'Lock Type' property='name'}}
+        <div class="productSpecs-item">
+          <span class="item-label">Lock Type:</span>
+          <span class="item-value">{{value}}</span>
+        </div>
+        {{/filter}} {{#filter product.custom_fields 'Style' property='name'}}
+        <div class="productSpecs-item">
+          <span class="item-label">Style:</span>
+          <span class="item-value">{{value}}</span>
+        </div>
+        {{/filter}} {{#filter product.custom_fields 'Lock Function'
+        property='name'}}
+        <div class="productSpecs-item">
+          <span class="item-label">Lock Function:</span>
+          <span class="item-value">{{value}}</span>
+        </div>
+        {{/filter}} {{#filter product.custom_fields 'Maximum Door Thickness'
+        property='name'}}
+        <div class="productSpecs-item">
+          <span class="item-label">Maximum Door Thickness:</span>
+          <span class="item-value">{{value}}</span>
+        </div>
+        {{/filter}} {{#filter product.custom_fields 'Minimum Door Thickness'
+        property='name'}}
+        <div class="productSpecs-item">
+          <span class="item-label">Minimum Door Thickness:</span>
+          <span class="item-value">{{value}}</span>
+        </div>
+        {{/filter}}
+      </div>
+    </div>
+  </div>
+</div>

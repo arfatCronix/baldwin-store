@@ -1043,5 +1043,9 @@
     "privacy_policy": "Privacy Policy",
     "allow_category_tracking": "Allow [CATEGORY_NAME] tracking",
     "disallow_category_tracking": "Disallow [CATEGORY_NAME] tracking"
+  },
+  "product": {
+    "specifications": "SPECIFICATIONS",
+    "details_heading": "DETAILS"
   }
 }

@@ -1,0 +1,26 @@
+{{#if product}}
+<div class="productDetails-customSection">
+  <div class="productDetails-info">
+    <h2 class="productDetails-title">
+      {{lang "product.details_heading" default="DETAILS"}}
+    </h2>
+    {{#if product.description}}
+    <div class="productDetails-list">{{{product.description}}}</div>
+    {{else}}
+    <div class="productDetails-list">
+      {{lang "product.no_description" default="No description available"}}
+    </div>
+    {{/if}}
+  </div>
+
+  <div class="productDetails-image">
+    {{#filter product.custom_fields 'Product feature image' property='name'}}
+    {{#if value}} <img src="{{value}}" alt="{{lang "product.details_image_alt"
+    default="Product Details"}}" loading="lazy" /> {{else}}
+    <div class="no-image">
+      {{lang "product.no_image" default="No image available"}}
+    </div>
+    {{/if}} {{/filter}}
+  </div>
+</div>
+{{/if}}

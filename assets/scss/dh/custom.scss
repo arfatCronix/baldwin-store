@@ -85,3 +85,226 @@
 }
 
 // Hero Carousel Styles End
+
+// Product Details Styles
+$section-max-width: 1148px;
+
+.productDetails {
+    &-customSection {
+        display: flex;
+        flex-direction: column;
+        gap: spacing("double");
+        margin: spacing("triple") auto spacing("double"); // Added margin-top here
+        max-width: $section-max-width;
+        padding: 0 spacing("base");
+        
+        @include breakpoint("medium") {
+            flex-direction: row;
+            gap: spacing("triple");
+        }
+    }
+
+    &-list {
+        p {
+            display: none;
+        }
+
+        ul {
+            li {
+                margin-bottom: spacing("base");
+                color: stencilColor("color-lightText");
+
+                span {
+                    font-family: stencilFontFamily("body-font");
+                    color: stencilColor("color-lightText");
+                }
+            }
+        }
+    }
+
+    &-info {
+        flex: 1;
+        order: 2;
+        
+        @include breakpoint("medium") {
+            width: 50%;
+            order: 1;
+        }
+    }
+
+    &-image {
+        flex: 1;
+        order: 1;
+        
+        @include breakpoint("medium") {
+            width: 50%;
+            order: 2;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: radius("small");
+        }
+    }
+
+    .productDetails-list {
+        ul li span {
+            font-family: stencilFontFamily("body-font") !important;
+            color: stencilColor("color-lightText");
+        }
+    }
+}
+
+
+// prodcut specs
+
+.productSpecs-section {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    background-color: #F5F5F5;
+    padding: 60px 20px;
+    margin-top: spacing("double");
+    margin-bottom: spacing("double");
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: spacing("double");
+        max-width: 1148px;
+        margin: 0 auto;
+        width: 100%;
+        
+        @include breakpoint("medium") {
+            flex-direction: row;
+            gap: spacing("triple");
+            align-items: center;
+            padding: 0 spacing("base");
+        }
+        
+        @media (max-width: 768px) {
+            gap: 0;
+        }
+    }
+}
+
+.productSpecs-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0 10px;
+    order: 2;
+    
+    @include breakpoint("medium") {
+        width: 50%;
+        padding: 0;
+        order: 2;
+    }
+}
+
+.productSpecs-image {
+    flex: 1;
+    margin-bottom: spacing("double");
+    padding: 0 10px;
+    order: 1;
+    
+    @include breakpoint("medium") {
+        width: 50%;
+        margin-bottom: 0;
+        padding: 0;
+        order: 1;
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: radius("small");
+    }
+}
+
+
+.item-label {
+    width: 180px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.productSpecs-title {
+    font-family: stencilFontFamily("headings-font");
+    font-size: fontSize("larger");
+    color: stencilColor("color-textHeading");
+    margin-bottom: spacing("single");
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.productSpecs-list {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.productSpecs-item {
+    display: flex;
+    justify-content: start;
+    padding: spacing("base") 0;
+    border-bottom: 1px solid stencilColor("specs");
+    gap: 2rem;
+    
+    @include breakpoint("medium") {
+        gap: 4rem;
+    }
+    
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.item-label {
+    color: stencilColor("color-primary");
+    font-family: stencilFontFamily("body-font");
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    overflow: hidden;
+}
+
+.item-value {
+    color: stencilColor("color-textHeading");
+    text-align: start;
+    flex: 1;
+}
+
+.productSpecs-image {
+    flex: 1;
+    margin-bottom: spacing("double");
+    padding: 0 10px;
+    order: 1;
+    
+    @include breakpoint("medium") {
+        width: 50%;
+        margin-bottom: 0;
+        padding: 0;
+        order: 1;
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: radius("small");
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
