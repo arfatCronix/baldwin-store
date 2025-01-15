@@ -1,0 +1,45 @@
+<h2 class="photos-heading">Photos</h2>
+<div class="product-images">
+  {{#each custom_fields}} {{#if (toLowerCase name) '===' 'diagram_technical'}}
+  <div class="image-container">
+    <img
+      src="{{value}}"
+      alt="Technical Diagram 1"
+      class="lightbox-trigger"
+      loading="lazy"
+    />
+  </div>
+  <div class="image-container">
+    <img
+      src="{{value}}"
+      alt="Technical Diagram 2"
+      class="lightbox-trigger"
+      loading="lazy"
+    />
+  </div>
+  {{/if}} {{/each}} {{#each product.custom_fields}} {{#if (toLowerCase name)
+  '===' 'related photos'}}
+  <div class="image-container">
+    <img
+      src="{{value}}"
+      alt="Assembly Diagram 1"
+      class="lightbox-trigger"
+      loading="lazy"
+    />
+  </div>
+  <div class="image-container">
+    <img
+      src="{{value}}"
+      alt="Assembly Diagram 2"
+      class="lightbox-trigger"
+      loading="lazy"
+    />
+  </div>
+  {{/if}} {{/each}}
+</div>
+
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" alt="" />
+</div>
