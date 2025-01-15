@@ -20,9 +20,10 @@ product.shipping_messages}} {{> components/common/alert/alert-info message}}
   name="product_below_content"}}}
   <!-- here custom code -->
   {{> components/products/product-details}} {{>
-  components/products/product-specs}} {{#if product.videos.list.length}} {{>
-  components/products/videos product.videos}} {{/if}} {{#all
-  settings.show_product_reviews theme_settings.show_product_reviews (if
+  components/products/product-specs}} {{> components/products/resource-photos}}
+  {{#if product.videos.list.length}} {{> components/products/videos
+  product.videos}} {{/if}} {{#all settings.show_product_reviews
+  theme_settings.show_product_reviews (if
   theme_settings.show_product_details_tabs '!==' true)}} {{>
   components/products/reviews reviews=product.reviews product=product
   urls=urls}} {{/all}}
